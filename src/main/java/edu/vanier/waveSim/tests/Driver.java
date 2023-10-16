@@ -12,10 +12,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The Main class of the application.
- * It extends the Application class and is responsible for initializing the JavaFX application, 
- * setting up the primary stage, and launching the application.
- * 
+ * The Main class of the application. It extends the Application class and is
+ * responsible for initializing the JavaFX application, setting up the primary
+ * stage, and launching the application.
+ *
  * @author TODO
  */
 public class Driver extends Application {
@@ -25,8 +25,9 @@ public class Driver extends Application {
     /**
      * Override the abstract method start(Stage primaryStage) of Application.
      * The main entry point for the JavaFX application.
-     * 
-     * @param primaryStage the primary stage for this application, onto which the application scene can be set. 
+     *
+     * @param primaryStage the primary stage for this application, onto which
+     * the application scene can be set.
      * @exception Exception - if something goes wrong
      */
     @Override
@@ -39,11 +40,8 @@ public class Driver extends Application {
 
             loader.setController(new SimDriverController());
             BorderPane root = loader.load();
-            
+
             //-- 2) Create and set the scene to the stage.
-            
-            
-            
             Scene scene = new Scene(root, 700, 526);
             primaryStage.setScene(scene);
             primaryStage.sizeToScene();
@@ -53,15 +51,14 @@ public class Driver extends Application {
             logger.error(ex.getMessage(), ex);
         }
     }
-    
+
     /**
-     * Main method of the program.
-     * Execute the launch method of the Application class.
-     * Launch a standalone application.
+     * Main method of the program. Execute the launch method of the Application
+     * class. Launch a standalone application.
+     *
      * @param args - The line of arguments passed down to the application.
      */
     public static void main(String[] args) {
         launch(args);
     }
 }
-
