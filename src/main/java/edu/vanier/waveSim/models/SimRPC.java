@@ -43,10 +43,11 @@ public class SimRPC extends CellularLogic {
     }
 }
 
+/*
 public Color RandomColor(){
     
 return null;
 }
-
+*/
     
-}
+
