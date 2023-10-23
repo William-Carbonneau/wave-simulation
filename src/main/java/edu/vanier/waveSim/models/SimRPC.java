@@ -18,9 +18,9 @@ public class SimRPC extends CellularLogic {
     private int nreOfDifferentEntities = 5;
     private int nreOfNeededPredator = 3;
     Color[] colors = {Color.ORANGE, Color.YELLOW, Color.RED, Color.BLUE, Color.PURPLE, Color.GREEN, Color.GRAY};
-        private final static Logger logger = LoggerFactory.getLogger(SimRPC.class);
+    private final static Logger logger = LoggerFactory.getLogger(SimRPC.class);
 
-    public SimRPC(Canvas operatingCanvas, int widthX, int heightY) {
+    public SimRPC(Canvas operatingCanvas, int widthX, int heightY, int scaling) {
         super(operatingCanvas, widthX, heightY);
 
         //Initialize random color
@@ -39,15 +39,19 @@ public class SimRPC extends CellularLogic {
 
     @Override
     public void simFrame() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+    }
+
+    public void InitializeRandomColor() {
+        for (int i = 0; i < widthX; i++) {
+            for (int j = 0; j < heightY; j++) {
+                colorCell(i, j, colors[(int) (Math.random() * nreOfDifferentEntities)]);
+            }
+        }
+    }
+    
+    public void lookAround(int x, int y, Color color){
+        int numberOfSpecific = 0;
+        
     }
 }
-
-/*
-public Color RandomColor(){
-    
-return null;
-}
-*/
-    
-

@@ -36,7 +36,7 @@ public class SimDriverController {
     private final static Logger logger = LoggerFactory.getLogger(SimDriverController.class);
 
     private boolean animationRunning = false;
-    
+    boolean autoClickerOn = false;
     
     /**Point object for use in array of origin points*/
     private class Point{
@@ -141,7 +141,7 @@ public class SimDriverController {
         btnPlay.setOnAction((event) -> {
             handlePlayBtn(simulation, animation);
         });
-         
+       
         btnPause.setOnAction((event) -> {
             handlePauseBtn(animation);
         });
@@ -227,8 +227,14 @@ public class SimDriverController {
             }
         }
     }
-    
-    
+    /*
+    TODO
+    */
+    private void autoClicker(CellularAnimTimer animation, SimLogicWave1 simulation){
+
+        
+        
+    }
     /**
      * Event that is activated when the play button is clicked.
      * The animation will play.
