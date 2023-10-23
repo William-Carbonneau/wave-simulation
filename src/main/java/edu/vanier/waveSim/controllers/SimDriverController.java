@@ -29,14 +29,14 @@ import org.slf4j.LoggerFactory;
 /**
  * Controller class of the MainApp's UI.
  *
- * @author frostybee
+ * @author TODO
  */
 public class SimDriverController {
 
     private final static Logger logger = LoggerFactory.getLogger(SimDriverController.class);
 
     private boolean animationRunning = false;
-    
+    boolean autoClickerOn = false;
     
     /**Point object for use in array of origin points*/
     private class Point{
@@ -90,20 +90,22 @@ public class SimDriverController {
         
     }
     
-    HashSet<Point> pointList = new HashSet<>();
+    HashSet<Point> pointList;
     
     
 //    get elements from FXML
     @FXML
     private Canvas SimCanvas;
     @FXML
-    private Button btnTest;
+    private Button btnPlay;
     @FXML
-    private Button btnStop;
+    private Button btnPause;
     @FXML
-    private Button btnStart;
+    private Button btnReset;
     @FXML
     private ChoiceBox scaleChoice;
+    @FXML
+    private ChoiceBox simTypeChoice;
     @FXML
     private Slider sldrDamping;
     @FXML
@@ -112,41 +114,56 @@ public class SimDriverController {
     // list of choices for scale factor, 1 and then multiples of 2 (for math reasons)
     ObservableList<Integer> scaleChoiceItems = FXCollections.observableArrayList(1,2,4,6,8);
     
+    //list of simulation types, simple wave, etc
+    ObservableList<String> simTypeChoiceItems = FXCollections.observableArrayList("Simple Ripple");
+    
+    /**
+     * Initialize the FXML file of the simulation, assignee events to the controllers and 
+     * import the simulation the the FXML file.
+     */
     @FXML
     public void initialize() {
         // create simulation object
         SimLogicWave1 simulation = new SimLogicWave1(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
         CellularAnimTimer animation = new CellularAnimTimer(simulation);
+        simulation.clearScreen();
         
+        pointList = new HashSet<>();
+        
+        // set ChoiceBox elements
         scaleChoice.setValue(1);
         scaleChoice.setItems(scaleChoiceItems);
         
+        simTypeChoice.setValue("Simple Ripple");
+        simTypeChoice.setItems(simTypeChoiceItems);
         
-        btnTest.setOnAction((event) -> {
-            handleTestBtn(simulation, animation);
+        
+        btnPlay.setOnAction((event) -> {
+            handlePlayBtn(simulation, animation);
         });
-         
-        btnStop.setOnAction((event) -> {
-            handleStopBtn(animation);
+       
+        btnPause.setOnAction((event) -> {
+            handlePauseBtn(animation);
         });
         
-        btnStart.setOnAction((event) -> {
-            handleStartBtn(animation);
+        btnReset.setOnAction((event) -> {
+            ResetScreenAndAnim(simulation, animation,simulation.getScaling());
         });
         
-        // add listenner to slider to change the damping during  simulation
+        // add listener to slider to change the damping during  simulation, Comes from (ukasp, JavaFX: Slider class 2022) see README
         sldrDamping.valueProperty().addListener(new ChangeListener<Number>() {
 
                 @Override
                 public void changed(
                    ObservableValue<? extends Number> observableValue, 
                    Number oldValue, 
-                   Number newValue) { 
-                      simulation.setDamping(newValue.floatValue());
+                   Number newValue) {
+                      // map damping
+                      simulation.setDamping(1-newValue.floatValue());
                   }
         });
         
-        // add listenner to scaling choicebox to change the scaling. This clears the screen and stops the animation and clears the origin point list.
+        // add listener to scaling choicebox to change the scaling. This clears the screen and stops the animation and clears the origin point list.
         scaleChoice.valueProperty().addListener(new ChangeListener<Number>() {
 
                 @Override
@@ -154,11 +171,18 @@ public class SimDriverController {
                    ObservableValue<? extends Number> observableValue, 
                    Number oldValue, 
                    Number newValue) {
-                      simulation.setScaling(newValue.intValue());
-                      simulation.clearScreen();
-                      pointList.clear();
-                      animation.stop();
+                      ResetScreenAndAnim(simulation, animation,newValue.intValue());
                   }
+        });
+        
+        //add listener to simulation type choicebox to change the simulation type. This will change the simulation logic.
+        simTypeChoice.valueProperty().addListener(new ChangeListener<String>()  {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                
+            }
+                
+            
         });
         
         // bind text property to the slider value
@@ -171,13 +195,20 @@ public class SimDriverController {
         
     }
     
+    /**
+     * Create a red point in the simulation on the selected x and y coordinate
+     * that follows the chosen cellular logic.
+     * @param x The horizontal position of the new point
+     * @param y The vertical position of the new point 
+     * @param simulation The cellular logic that the point will follow
+     */
     private void newPoint(double x, double y, CellularLogic simulation) {
         int xFloor = (int)Math.floor(x);
         int yFloor = (int)Math.floor(y);
         int xFloorScaled = (int)Math.floor(x)/simulation.getScaling();
         int yFloorScaled = (int)Math.floor(y)/simulation.getScaling();
         Point clickPoint = new Point(xFloorScaled, yFloorScaled);
-        if (!pointList.contains(clickPoint) && xFloorScaled < simulation.getScaledX()-1 && yFloorScaled < simulation.getScaledY()-1) {
+        if (!pointList.contains(clickPoint) && xFloorScaled < simulation.getScaledX()-1 && yFloorScaled < simulation.getScaledY()-1 && xFloorScaled > 0 && yFloorScaled > 0) {
             
             if (animationRunning == false) {
                 // add the point to the ArrayList of current points.
@@ -196,9 +227,22 @@ public class SimDriverController {
             }
         }
     }
-    
-    private void handleTestBtn(SimLogicWave1 simulation, CellularAnimTimer animation){
-        System.out.println("Test");
+    /*
+    TODO
+    */
+    private void autoClicker(CellularAnimTimer animation, SimLogicWave1 simulation){
+
+        
+        
+    }
+    /**
+     * Event that is activated when the play button is clicked.
+     * The animation will play.
+     * @param simulation the simulation on of the animation
+     * @param animation the animation it will handle
+     */
+    private void handlePlayBtn(SimLogicWave1 simulation, CellularAnimTimer animation){
+        System.out.println("Play");
         
         System.out.println("STARTING THE SIMULATION");
         
@@ -209,19 +253,30 @@ public class SimDriverController {
         animation.start();
  
     }
-    
-    private void handleStopBtn(CellularAnimTimer animation) {
+    /**
+     * Event that is activated when the pause button is clicked.
+     * The animation will stop.
+     * @param animation the animation it will handle
+     */
+    private void handlePauseBtn(CellularAnimTimer animation) {
         System.out.println("Stop button pressed");
         animation.stop();
         animationRunning = false;
         System.out.println("Animation stopped");
     }
     
-    
-    public void handleStartBtn(CellularAnimTimer animation) {
-        System.out.println("Restarting animation button pressed");
-        animation.start();
-        animationRunning = true;
-        System.out.println("Restarted animation");
+    /**
+     * Reset the animation and screen
+     * The animation will stop and the simulation will be cleared.
+     * @param simulation CellularLogic object providing the simulation target 
+     * @param animation CellularAnimTimer object providing the animation it will handle
+     * @param scaling scaling by which to reset the animation with
+     */
+    public void ResetScreenAndAnim(CellularLogic simulation, CellularAnimTimer animation ,int scaling) {
+        simulation.setScaling(scaling);
+        simulation.clearScreen();
+        pointList.clear();
+        animation.stop();
+        animationRunning = false;
     }
 }
