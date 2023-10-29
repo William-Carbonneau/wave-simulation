@@ -17,6 +17,7 @@ public class SimRPC extends CellularLogic {
 
     private int nreOfDifferentEntities = 5;
     private int nreOfNeededPredator = 3;
+    private int nreOfRandomPredator = 3;
     private int delay = 330;
     Color[] colors = {Color.ORANGE, Color.YELLOW, Color.RED, Color.BLUE, Color.PURPLE, Color.GREEN, Color.GRAY};
     private final static Logger logger = LoggerFactory.getLogger(SimRPC.class);
@@ -59,7 +60,7 @@ public class SimRPC extends CellularLogic {
     verify scaled x and y
     */
     	public void step() {
-		int[][] newCells = cells;
+		//int[][] newCells = cells;
                 this.nextFrame = this.current;
 		
 		for (int i = 0; i < scaledX; i++) {
@@ -72,29 +73,29 @@ public class SimRPC extends CellularLogic {
 
 				//Count number if neighbour predators for each predator state
 				for (int k = 0; k < predatorStates; k++) {
-					predatorState[k] = (cells[i][j] + 1 + k) % states;
-					predators[k] = countNeighbours(j, i, predatorState[k]);
+					predatorState[k] =(int)((current[i][j] + 1 + k) % nreOfDifferentEntities);
+					predators[k] = lookAround(i, j, colors[(int) predatorState[k]]);
 					gesamtPredators += predators[k];
 				}
 				
-				int randomMinimum = (int) (Math.random() * randomPredatorMinimum);
+				int randomMinimum = (int) (Math.random() * nreOfRandomPredator);
 				
 				//If there are more neighbour predators than the threshold, change current cell to a random predator cell (weighted)
-				if (gesamtPredators >= predatorMinimum + randomMinimum) {
+				if (gesamtPredators >= nreOfRandomPredator + randomMinimum) {
 					int r = (int) (Math.random() * gesamtPredators);
 					int k = -1;
 					while (r >= 0) {
 						k++;
 						r -= predators[k];
 					}
-					newCells[i][j] = predatorState[k];
+					this.nextFrame[i][j] = predatorState[k];
 				}
 				
 			}
 
 		}
 		
-		cells = newCells;
+		this.current = this.nextFrame;
 	}
 
     public int lookAround(int x, int y, Color color) {
