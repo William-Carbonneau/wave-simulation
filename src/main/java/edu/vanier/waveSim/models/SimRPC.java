@@ -39,10 +39,7 @@ public class SimRPC extends CellularLogic {
         }
     }
 
-    @Override
-    public void simFrame() {
 
-    }
 
     public void InitializeRandomColor() {
         for (int i = 0; i < scaledX; i++) {
@@ -54,12 +51,12 @@ public class SimRPC extends CellularLogic {
         }
     }
     
-    
     /*
     To Modify for my 
     verify scaled x and y
     */
-    	public void step() {
+        @Override
+    	public void simFrame() {
 		//int[][] newCells = cells;
                 this.nextFrame = this.current;
 		
@@ -89,6 +86,7 @@ public class SimRPC extends CellularLogic {
 						r -= predators[k];
 					}
 					this.nextFrame[i][j] = predatorState[k];
+                                        colorCell(i, j, colors[predatorState[k]]);
 				}
 				
 			}

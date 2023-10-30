@@ -112,7 +112,7 @@ public class SimDriverController {
     }
 
     HashSet<Point> pointList;
-    CellularLogic[] simulationsList = new CellularLogic[3];
+    CellularLogic[] simulationsList = new CellularLogic[4];
     CellularLogic simulation;
     CellularAnimTimer animation;
 
@@ -293,10 +293,12 @@ public class SimDriverController {
                     simulation = simulations[2];
                     return simulation;
                 }
+                
                 case "Rock Paper Scissor" -> {
                     simulation = simulations[3];
                     return simulation;
                 }
+                
                 default -> {
                     return simulation;
                 }
