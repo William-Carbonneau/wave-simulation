@@ -7,6 +7,7 @@ import edu.vanier.waveSim.models.CellularLogic;
 import javafx.fxml.FXML;
 import edu.vanier.waveSim.models.ConwayGameOfLifeLogic;
 import edu.vanier.waveSim.models.SimLogicWave1;
+import edu.vanier.waveSim.models.SimRPC;
 import java.awt.Component;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -46,19 +47,24 @@ import org.slf4j.LoggerFactory;
  *
  * @author TODO
  */
-public class SimDriverController{
+public class SimDriverController {
 
     private final static Logger logger = LoggerFactory.getLogger(SimDriverController.class);
 
     private boolean animationRunning = false;
 
-    
-    /**Point object for use in array of origin points*/
-    private class Point{
+    int scale = 1;
+    int delayMillis = 1;
+
+    /**
+     * Point object for use in array of origin points
+     */
+    private class Point {
+
         private int x;
         private int y;
-        
-        Point(int x, int y){
+
+        Point(int x, int y) {
             this.x = x;
             this.y = y;
         }
@@ -102,15 +108,14 @@ public class SimDriverController{
             }
             return this.y == other.y;
         }
-        
+
     }
-    
+
     HashSet<Point> pointList;
     CellularLogic[] simulationsList = new CellularLogic[3];
     CellularLogic simulation;
     CellularAnimTimer animation;
-    
-    
+
 //    get elements from FXML
     @FXML
     private Canvas SimCanvas;
@@ -142,16 +147,15 @@ public class SimDriverController{
     private Button btnPauseRender;
     @FXML
     private Button btnResetRender;
-    
+
     // list of choices for scale factor, 1 and then multiples of 2 (for math reasons)
-    ObservableList<Integer> scaleChoiceItems = FXCollections.observableArrayList(1,2,4,6,8);
-    
+    ObservableList<Integer> scaleChoiceItems = FXCollections.observableArrayList(1, 2, 4, 6, 8);
+
     //list of simulation types, simple wave, etc
-    ObservableList<String> simTypeChoiceItems = FXCollections.observableArrayList("Simple Ripple", "Conway's Game of Life");
-    
+    ObservableList<String> simTypeChoiceItems = FXCollections.observableArrayList("Simple Ripple", "Conway's Game of Life", "Rock Paper Scissor");
     /**
-     * Initialize the FXML file of the simulation, assignee events to the controllers and 
-     * import the simulation the the FXML file.
+     * Initialize the FXML file of the simulation, assignee events to the
+     * controllers and import the simulation the the FXML file.
      */
     @FXML
     public void initialize() {
@@ -159,52 +163,50 @@ public class SimDriverController{
 
         SimLogicWave1 WaveSim = new SimLogicWave1(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
         ConwayGameOfLifeLogic Conway = new ConwayGameOfLifeLogic(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
-        
+        SimRPC simRPC = new SimRPC(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
         // initialize default simulation
         simulation = WaveSim;
-        
+
         simulationsList[0] = simulation;
         simulationsList[1] = WaveSim;
         simulationsList[2] = Conway;
-        
+        simulationsList[3] = simRPC;
+
         // initialize default animation object
         animation = new CellularAnimTimer(simulation);
         simulation.clearScreen();
-        
+
         pointList = new HashSet<>();
-        
+
         // set ChoiceBox elements
         scaleChoice.setValue(1);
         scaleChoice.setItems(scaleChoiceItems);
-        
+
         simTypeChoice.setValue("Simple Ripple");
         simTypeChoice.setItems(simTypeChoiceItems);
-        
-        
-        
+
         // https://stackoverflow.com/questions/37678704/how-to-embed-javafx-canvas-into-borderpane
 //        SimCanvas.widthProperty().bind(SimCanvasPane.widthProperty());
 //        SimCanvas.heightProperty().bind(SimCanvasPane.heightProperty());
-        
         btnPlay.setOnAction((event) -> {
             handlePlayBtn(simulation, animation);
         });
-       
+
         btnPause.setOnAction((event) -> {
             handlePauseBtn(animation);
         });
-        
+
         btnReset.setOnAction((event) -> {
-            ResetScreenAndAnim(simulation, animation,simulation.getScaling());
+            ResetScreenAndAnim(simulation, animation, simulation.getScaling());
         });
-        itmSave.setOnAction((event)->{
+        itmSave.setOnAction((event) -> {
             try {
                 handleSaveItm(simulation);
             } catch (IOException ex) {
                 System.out.println(ex.toString());
             }
         });
-        itmLoad.setOnAction((event)->{
+        itmLoad.setOnAction((event) -> {
             try {
                 handleLoadItm(simulation);
             } catch (FileNotFoundException ex) {
@@ -214,45 +216,45 @@ public class SimDriverController{
         // add listener to damping slider to change the damping during  simulation, Comes from (ukasp, JavaFX: Slider class 2022) see README
         sldrDamping.valueProperty().addListener(new ChangeListener<Number>() {
 
-                @Override
-                public void changed(
-                   ObservableValue<? extends Number> observableValue, 
-                   Number oldValue, 
-                   Number newValue) {
-                      // map damping
-                      WaveSim.setDamping(1-newValue.floatValue());
-                  }
+            @Override
+            public void changed(
+                    ObservableValue<? extends Number> observableValue,
+                    Number oldValue,
+                    Number newValue) {
+                // map damping
+                WaveSim.setDamping(1 - newValue.floatValue());
+            }
         });
-        
+
         // add listener to speed slider to change the damping during  simulation, Comes from (ukasp, JavaFX: Slider class 2022) see README
         sldrSpeed.valueProperty().addListener(new ChangeListener<Number>() {
 
-                @Override
-                public void changed(
-                   ObservableValue<? extends Number> observableValue, 
-                   Number oldValue, 
-                   Number newValue) {
-                      // map damping
-                      animation.setDelayMillis(newValue.intValue());
-                      delayMillis = newValue.intValue();
-                  }
+            @Override
+            public void changed(
+                    ObservableValue<? extends Number> observableValue,
+                    Number oldValue,
+                    Number newValue) {
+                // map damping
+                animation.setDelayMillis(newValue.intValue());
+                delayMillis = newValue.intValue();
+            }
         });
-        
+
         // add listener to scaling choicebox to change the scaling. This clears the screen and stops the animation and clears the origin point list.
         scaleChoice.valueProperty().addListener(new ChangeListener<Number>() {
 
-                @Override
-                public void changed(
-                   ObservableValue<? extends Number> observableValue, 
-                   Number oldValue, 
-                   Number newValue) {
-                      scale = newValue.intValue();
-                      ResetScreenAndAnim(simulation, animation,newValue.intValue());
-                  }
+            @Override
+            public void changed(
+                    ObservableValue<? extends Number> observableValue,
+                    Number oldValue,
+                    Number newValue) {
+                scale = newValue.intValue();
+                ResetScreenAndAnim(simulation, animation, newValue.intValue());
+            }
         });
-        
+
         //add listener to simulation type choicebox to change the simulation type. This will change the simulation logic.
-        simTypeChoice.valueProperty().addListener(new ChangeListener<String>()  {
+        simTypeChoice.valueProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 animation.stop();
@@ -260,56 +262,64 @@ public class SimDriverController{
                 animation = new CellularAnimTimer(simulation);
                 animation.setDelayMillis(delayMillis);
                 ResetScreenAndAnim(simulation, animation, scale);
-            }  
+            }
         });
-        
+
         // bind text property to the slider value damping
-        lblDamping.textProperty().bind(Bindings.format("%.3f",sldrDamping.valueProperty()));
+        lblDamping.textProperty().bind(Bindings.format("%.3f", sldrDamping.valueProperty()));
         // bind text property to the slider value speed
-        lblSpeed.textProperty().bind(Bindings.format("%1.0f",sldrSpeed.valueProperty()));
-        
+        lblSpeed.textProperty().bind(Bindings.format("%1.0f", sldrSpeed.valueProperty()));
+
         // get coordinates of mouse on click
         SimCanvas.setOnMouseClicked((event) -> {
-            newPoint(event.getX(),event.getY(), simulation);
+            newPoint(event.getX(), event.getY(), simulation);
         });
-        
+
     }
-    
-    /**TODO Documentation -> switched the active simulation
+
+    /**
+     * TODO Documentation -> switched the active simulation
      */
     private CellularLogic changeSim(String newValue, CellularLogic[] simulations, CellularLogic simulation) {
         if (null == newValue) {
             return simulation;
-        }else switch (newValue) {
-            case "Simple Ripple" -> {
-                simulation = simulations[1];
-                return simulation;
-            }
-            case "Conway's Game of Life" -> {
-                simulation = simulations[2];
-                return simulation;
-            }
-            default -> {
-                return simulation;
+        } else {
+            switch (newValue) {
+                case "Simple Ripple" -> {
+                    simulation = simulations[1];
+                    return simulation;
+                }
+                case "Conway's Game of Life" -> {
+                    simulation = simulations[2];
+                    return simulation;
+                }
+                case "Rock Paper Scissor" -> {
+                    simulation = simulations[3];
+                    return simulation;
+                }
+                default -> {
+                    return simulation;
+                }
             }
         }
     }
-    
+
     /**
      * Create a red point in the simulation on the selected x and y coordinate
      * that follows the chosen cellular logic.
+     *
      * @param x The horizontal position of the new point
-     * @param y The vertical position of the new point 
+     * @param y The vertical position of the new point
      * @param simulation The cellular logic that the point will follow
      */
     private void newPoint(double x, double y, CellularLogic simulation) {
-        int xFloor = (int)Math.floor(x);
-        int yFloor = (int)Math.floor(y);
-        int xFloorScaled = (int)Math.floor(x)/simulation.getScaling();
-        int yFloorScaled = (int)Math.floor(y)/simulation.getScaling();
+        int xFloor = (int) Math.floor(x);
+        int yFloor = (int) Math.floor(y);
+        int xFloorScaled = (int) Math.floor(x) / simulation.getScaling();
+        int yFloorScaled = (int) Math.floor(y) / simulation.getScaling();
         Point clickPoint = new Point(xFloorScaled, yFloorScaled);
-        if (!pointList.contains(clickPoint) && xFloorScaled < simulation.getScaledX()-1 && yFloorScaled < simulation.getScaledY()-1 && xFloorScaled > 0 && yFloorScaled > 0) {
-            
+        if (!pointList.contains(clickPoint) && xFloorScaled < simulation.getScaledX() - 1 && yFloorScaled < simulation.getScaledY() - 1 && xFloorScaled > 0 && yFloorScaled > 0) {
+
             if (animationRunning == false) {
                 // add the point to the ArrayList of current points.
                 pointList.add(clickPoint);
@@ -319,7 +329,7 @@ public class SimDriverController{
             // add the point to the canvas as Color.RED
             // the scaling must be adjusted because colorCell uses array coorrdinates, not canvas coordinates
             simulation.colorCell(xFloorScaled, yFloorScaled, Color.RED);
-        }else if (animationRunning == false && pointList.contains(clickPoint)){
+        } else if (animationRunning == false && pointList.contains(clickPoint)) {
             pointList.remove(clickPoint);
             // if the point was removed from the array, remove from canvas.
             if (simulation.removePoint(xFloor, yFloor)) {
@@ -327,31 +337,34 @@ public class SimDriverController{
             }
         }
     }
+
     /*
     TODO
-    */
-    private void autoClicker(CellularAnimTimer animation, SimLogicWave1 simulation){
+     */
+    private void autoClicker(CellularAnimTimer animation, SimLogicWave1 simulation) {
 
-        
-        
     }
+
     /**
-     * Event that is activated when the play button is clicked.
-     * The animation will play.
+     * Event that is activated when the play button is clicked. The animation
+     * will play.
+     *
      * @param simulation the simulation on of the animation
      * @param animation the animation it will handle
      */
-    private void handlePlayBtn(CellularLogic simulation, CellularAnimTimer animation){
+    private void handlePlayBtn(CellularLogic simulation, CellularAnimTimer animation) {
         System.out.println("STARTING THE SIMULATION");
-        
+
         animationRunning = true;
-        
+
         animation.start();
- 
+
     }
+
     /**
-     * Event that is activated when the pause button is clicked.
-     * The animation will stop.
+     * Event that is activated when the pause button is clicked. The animation
+     * will stop.
+     *
      * @param animation the animation it will handle
      */
     private void handlePauseBtn(CellularAnimTimer animation) {
@@ -360,64 +373,69 @@ public class SimDriverController{
         animationRunning = false;
         System.out.println("Animation stopped");
     }
+
     /**
-     * This method saves the settings of a simulation in a CSV File called settings.csv
-     * This file is contained in the resources folder, in a package called data
-     * Source used as an example to learn how to use PrintWriter to write in a Csv File: https://stackoverflow.com/questions/68218102/how-can-i-write-data-to-csv-in-chunks-via-printwriter-in-java
+     * This method saves the settings of a simulation in a CSV File called
+     * settings.csv This file is contained in the resources folder, in a package
+     * called data Source used as an example to learn how to use PrintWriter to
+     * write in a Csv File:
+     * https://stackoverflow.com/questions/68218102/how-can-i-write-data-to-csv-in-chunks-via-printwriter-in-java
      */
     private void handleSaveItm(CellularLogic simulation) throws IOException {
         System.out.println("Save button clicked");
         FileChooser f = new FileChooser();
-            Stage stage  = new Stage();
-            stage.setAlwaysOnTop(true);
-            File file = f.showOpenDialog(stage);
-        try(FileWriter fw = new FileWriter(file.getPath());
-                PrintWriter writer = new PrintWriter(fw);){
+        Stage stage = new Stage();
+        stage.setAlwaysOnTop(true);
+        File file = f.showOpenDialog(stage);
+        try ( FileWriter fw = new FileWriter(file.getPath());  PrintWriter writer = new PrintWriter(fw);) {
             //Erase previous save settings
             writer.flush();
             //Write damping
-            writer.write(Double.toString(sldrDamping.getValue())+",");
+            writer.write(Double.toString(sldrDamping.getValue()) + ",");
             //Write scale
-            writer.write(scaleChoice.getValue().toString()+",");
+            writer.write(scaleChoice.getValue().toString() + ",");
             //Write simulation type
-            writer.write(simTypeChoice.getValue().toString()+",");
+            writer.write(simTypeChoice.getValue().toString() + ",");
             // Write speed
-            writer.write(Double.toString(sldrSpeed.getValue())+",");
+            writer.write(Double.toString(sldrSpeed.getValue()) + ",");
             //Write points
-            for(Iterator<Point> points = pointList.iterator(); points.hasNext();){
+            for (Iterator<Point> points = pointList.iterator(); points.hasNext();) {
                 Point currentPoint = points.next();
-                if(points.hasNext()==false)
-                    writer.write(Integer.toString(currentPoint.getX())+","+Integer.toString(currentPoint.getY()));
-                else
-                    writer.write(Integer.toString(currentPoint.getX())+","+Integer.toString(currentPoint.getY())+",");
+                if (points.hasNext() == false) {
+                    writer.write(Integer.toString(currentPoint.getX()) + "," + Integer.toString(currentPoint.getY()));
+                } else {
+                    writer.write(Integer.toString(currentPoint.getX()) + "," + Integer.toString(currentPoint.getY()) + ",");
+                }
             }
             writer.write("\n");
         }
     }
+
     /**
-     * This method loads the settings from a csv file chosen by the user.
-     * The file needs to be csv, therefore, exception handling is used to verify the validity of the file chosen by the user.
+     * This method loads the settings from a csv file chosen by the user. The
+     * file needs to be csv, therefore, exception handling is used to verify the
+     * validity of the file chosen by the user.
      */
     private void handleLoadItm(CellularLogic simulation) throws FileNotFoundException {
         System.out.println("Load button clicked");
-        try{
+        try {
             FileChooser f = new FileChooser();
-        Stage stage  = new Stage();
-        stage.setAlwaysOnTop(true);
-        File file = f.showOpenDialog(stage);
-        // make sure that the file is csv
-        /*
+            Stage stage = new Stage();
+            stage.setAlwaysOnTop(true);
+            File file = f.showOpenDialog(stage);
+            // make sure that the file is csv
+            /*
         Cannot mkae alert dialog appear on tp of main Window
         boolean isCsv = "csv".equals(file.getPath().substring(file.getPath().length()-3, file.getPath().length()));
         if(!isCsv){
             showAlert("The file chosen is not a csv file. Please use a csv file. Try again.");
             itmLoad.getOnAction();
         }
-        */
-        CSVReader reader = new CSVReader(new FileReader(file.getPath()));
+             */
+            CSVReader reader = new CSVReader(new FileReader(file.getPath()));
             int saveOption = 0;
             String[] settings = reader.readAll().get(saveOption);
-            
+
             //Set scaling
             simulation.setScaling(Integer.parseInt(settings[1]));
             // Set the damping
@@ -427,55 +445,61 @@ public class SimDriverController{
             scaleChoice.setValue(scale);
             // Set simulation type
             simTypeChoice.setValue(settings[2]);
-            
+
             // Set simulation speed
             sldrSpeed.adjustValue(Double.parseDouble(settings[3]));
             // Set points
-            int x,y;
+            int x, y;
             System.out.println(settings.length);
-            for(int counterIndex = 0; counterIndex<((settings.length-4)/2); counterIndex++){
-                x=0;
-                y=0;
-                for(int counterCoordinates=0; counterCoordinates<2; counterCoordinates++){
-                    if(counterCoordinates==0)
-                        x=Integer.parseInt(settings[(counterIndex*2)+4]);
-                    else
-                        y=Integer.parseInt(settings[(counterIndex*2)+5]);
+            for (int counterIndex = 0; counterIndex < ((settings.length - 4) / 2); counterIndex++) {
+                x = 0;
+                y = 0;
+                for (int counterCoordinates = 0; counterCoordinates < 2; counterCoordinates++) {
+                    if (counterCoordinates == 0) {
+                        x = Integer.parseInt(settings[(counterIndex * 2) + 4]);
+                    } else {
+                        y = Integer.parseInt(settings[(counterIndex * 2) + 5]);
+                    }
                 }
-                System.out.println("Points: x="+x+" and y="+y);
+                System.out.println("Points: x=" + x + " and y=" + y);
                 simulation.colorCell(x, y, Color.CORAL);
-                simulation.setPoint(scale*x, scale*y);
-                pointList.add(new Point(x,y));
+                simulation.setPoint(scale * x, scale * y);
+                pointList.add(new Point(x, y));
             }
-            
-        }catch(Exception e){
+
+        } catch (Exception e) {
             System.out.println(e.toString());
         }
     }
+
     /**
-     * Reset the animation and screen
-     * The animation will stop and the simulation will be cleared.
-     * @param simulation CellularLogic object providing the simulation target 
-     * @param animation CellularAnimTimer object providing the animation it will handle
+     * Reset the animation and screen The animation will stop and the simulation
+     * will be cleared.
+     *
+     * @param simulation CellularLogic object providing the simulation target
+     * @param animation CellularAnimTimer object providing the animation it will
+     * handle
      * @param scaling scaling by which to reset the animation with
      */
-    public void ResetScreenAndAnim(CellularLogic simulation, CellularAnimTimer animation ,int scaling) {
-        for (int i=0;i<this.simulationsList.length;i++) {}
+    public void ResetScreenAndAnim(CellularLogic simulation, CellularAnimTimer animation, int scaling) {
+        for (int i = 0; i < this.simulationsList.length; i++) {
+        }
         simulation.setScaling(scaling);
         simulation.clearScreen();
         pointList.clear();
         animation.stop();
         animationRunning = false;
     }
+
     private void showAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
         alert.setContentText("Please try again.");
         alert.setHeaderText(message);
         alert.showAndWait();
-        if(alert.getResult() == ButtonType.OK){
+        if (alert.getResult() == ButtonType.OK) {
             System.out.println("Error message seen.");
         }
-        
+
     }
 }
