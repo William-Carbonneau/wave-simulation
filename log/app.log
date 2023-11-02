@@ -259,3 +259,54 @@
 15:46:07.906  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
 15:46:08.149  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
 15:46:08.152  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:31:11.412  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+08:31:11.615  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:31:11.616  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:32:16.339  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+08:32:16.535  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:32:16.537  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:33:04.316  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+08:33:04.516  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:33:04.517  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:36:54.979  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+08:36:55.180  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:36:55.182  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:36:55.184  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+08:36:55.184  [ERROR] e.v.w.t.Driver  msg: 
+/C:/Users/2264570/Documents/GitHub/wave-simulation/build/resources/main/fxml/mainAppTest.fxml
+
+javafx.fxml.LoadException: 
+/C:/Users/2264570/Documents/GitHub/wave-simulation/build/resources/main/fxml/mainAppTest.fxml
+
+	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2722)
+	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2692)
+	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
+	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
+	at edu.vanier.waveSim.tests.Driver.start(Driver.java:41)
+	at javafx.graphics@20.0.2/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
+	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
+	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
+	at javafx.graphics@20.0.2/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at javafx.graphics@20.0.2/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@20.0.2/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at javafx.base@20.0.2/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@20.0.2/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2688)
+	... 12 common frames omitted
+Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.vanier.waveSim.controllers.SimDriverController.initialize(SimDriverController.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	... 19 common frames omitted
+08:38:00.635  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+08:38:00.837  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:38:00.839  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:38:00.841  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default

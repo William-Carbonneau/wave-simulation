@@ -7,6 +7,7 @@ import edu.vanier.waveSim.models.CellularLogic;
 import javafx.fxml.FXML;
 import edu.vanier.waveSim.models.ConwayGameOfLifeLogic;
 import edu.vanier.waveSim.models.SimLogicWave1;
+import edu.vanier.waveSim.models.SimRPC;
 import java.awt.Component;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -108,7 +109,7 @@ public class SimDriverController{
     }
     
     HashSet<Point> pointList;
-    CellularLogic[] simulationsList = new CellularLogic[3];
+    CellularLogic[] simulationsList = new CellularLogic[4];
     CellularLogic simulation;
     CellularAnimTimer animation;
     
@@ -157,7 +158,7 @@ public class SimDriverController{
     ObservableList<Integer> scaleChoiceItems = FXCollections.observableArrayList(1,2,4,6,8);
     
     //list of simulation types, simple wave, etc
-    ObservableList<String> simTypeChoiceItems = FXCollections.observableArrayList("Simple Ripple", "Conway's Game of Life");
+    ObservableList<String> simTypeChoiceItems = FXCollections.observableArrayList("Simple Ripple", "Conway's Game of Life", "Rock-Paper-Scissors");
     
     /**
      * Initialize the FXML file of the simulation, assignee events to the controllers and 
@@ -169,13 +170,14 @@ public class SimDriverController{
 
         SimLogicWave1 WaveSim = new SimLogicWave1(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
         ConwayGameOfLifeLogic Conway = new ConwayGameOfLifeLogic(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
-        
+        SimRPC RPC = new SimRPC(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
         // initialize default simulation
         simulation = WaveSim;
         
         simulationsList[0] = simulation;
         simulationsList[1] = WaveSim;
         simulationsList[2] = Conway;
+        simulationsList[3] = RPC;
         
         // initialize default animation object
         animation = new CellularAnimTimer(simulation);
@@ -345,6 +347,10 @@ public class SimDriverController{
             }
             case "Conway's Game of Life" -> {
                 simulation = simulations[2];
+                return simulation;
+            }
+            case "Rock-Paper-Scissors" -> {
+                simulation = simulations[3];
                 return simulation;
             }
             default -> {
