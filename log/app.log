@@ -310,3 +310,19 @@ Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for l
 08:38:00.837  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
 08:38:00.839  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
 08:38:00.841  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+08:46:32.129  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+08:46:32.325  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:46:32.327  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:46:32.329  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+08:50:15.502  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+08:50:15.704  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:50:15.706  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:50:15.707  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+08:52:57.070  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+08:52:57.274  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:52:57.277  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:52:57.279  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+08:53:22.495  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+08:53:22.700  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:53:22.702  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:53:22.704  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default

@@ -21,11 +21,11 @@ public class SimRPC extends CellularLogic {
     private int delay = 330;
     Color[] colors = {Color.ORANGE, Color.YELLOW, Color.RED, Color.BLUE, Color.PURPLE, Color.GREEN, Color.GRAY, Color.HOTPINK};
     private final static Logger logger = LoggerFactory.getLogger(SimRPC.class);
-    boolean hasInitialized = false;
+    
 
     public SimRPC(Canvas operatingCanvas, int widthX, int heightY, int scaling) {
         super(operatingCanvas, widthX, heightY);
-       // simFrame();
+        // simFrame();
         if (scaling < 1 || scaling % 2 != 0) {
             logger.error("scaling is wrong, setting to 1 by default");
         } else {
@@ -36,7 +36,7 @@ public class SimRPC extends CellularLogic {
     public void InitializeRandomColor() {
         for (int i = 0; i < scaledX; i++) {
             for (int j = 0; j < scaledY; j++) {
-                int color = (int)Math.round((Math.random()*nreOfDifferentEntities));
+                int color = (int) Math.round((Math.random() * nreOfDifferentEntities));
                 current[i][j] = color;
                 //System.out.println(colors[color].getGreen());
                 colorCell(i, j, colors[color]);
@@ -50,7 +50,7 @@ public class SimRPC extends CellularLogic {
      */
     @Override
     public void simFrame() {
-        if(hasInitialized == false){
+        if (hasInitialized == false) {
             InitializeRandomColor();
             hasInitialized = true;
         }
@@ -59,10 +59,10 @@ public class SimRPC extends CellularLogic {
         this.nextFrame = this.current;
 
         for (int i = 0; i < scaledX; i++) {
-            
+
             for (int j = 0; j < scaledY; j++) {
 
-                int predatorStates = (nreOfDifferentEntities - 0) / 2; 
+                int predatorStates = (nreOfDifferentEntities - 0) / 2;
                 int[] predators = new int[predatorStates];
                 int[] predatorState = new int[predatorStates];
                 int gesamtPredators = 0;
@@ -78,7 +78,7 @@ public class SimRPC extends CellularLogic {
 
                 //If there are more neighbour predators than the threshold, change current cell to a random predator cell (weighted)
                 if (gesamtPredators >= nreOfRandomPredator + randomMinimum) {
-                   // System.out.println("Consumned");
+                    // System.out.println("Consumned");
                     int r = (int) (Math.random() * gesamtPredators);
                     int k = -1;
                     while (r >= 0) {
@@ -102,21 +102,23 @@ public class SimRPC extends CellularLogic {
             for (int j = 0; j < 3; j++) {
                 if (i != 1 || j != 1) {
                     //Catches all the index that will be out of bound and ignore them
-                    try{
-                    if (colors[(int)(getCellState(x + j - 1, y + i - 1)*nreOfDifferentEntities)] == color) {
-                        c++;
-                       // System.out.println("lookAround");
-                    }
-                    }
-                    catch(ArrayIndexOutOfBoundsException e){
+                    try {
+                        if (colors[(int) (getCellState(x + j - 1, y + i - 1) * nreOfDifferentEntities)] == color) {
+                            c++;
+                            // System.out.println("lookAround");
+                        }
+                    } catch (ArrayIndexOutOfBoundsException e) {
                     }
                 }
             }
-        } 
-    return c ;
+        }
+        return c;
     }
 
-public float getCellState(int x, int y) {
+    public float getCellState(int x, int y) {
         return current[x][y];
     }
+
+
+
 }

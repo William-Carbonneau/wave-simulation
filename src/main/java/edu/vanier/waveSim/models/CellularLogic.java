@@ -29,11 +29,13 @@ public abstract class CellularLogic {
 
     protected int scaledX;
     protected int scaledY;
+    protected boolean hasInitialized = false;
 
     protected Color backgroundColor = Color.WHITE;
 
     /**
-     * Must be an even integer, should be regulated by a dropdown menu in the GUI
+     * Must be an even integer, should be regulated by a dropdown menu in the
+     * GUI
      */
     protected int scaling = 1;
 
@@ -79,19 +81,23 @@ public abstract class CellularLogic {
         this.nextFrame = new float[widthX / this.scaling][heightY / this.scaling];
 
     }
-    
-    /**TODO Docs*/
-    public void setWidth(int width){
+
+    /**
+     * TODO Docs
+     */
+    public void setWidth(int width) {
         this.widthX = width;
-        this.scaledX = width/this.scaling;
+        this.scaledX = width / this.scaling;
         this.current = new float[widthX / this.scaling][heightY / this.scaling];
         this.nextFrame = new float[widthX / this.scaling][heightY / this.scaling];
     }
-    
-    /**TODO Docs*/
-    public void setHeight(int height){
+
+    /**
+     * TODO Docs
+     */
+    public void setHeight(int height) {
         this.heightY = height;
-        this.scaledY = height/this.scaling;
+        this.scaledY = height / this.scaling;
         this.current = new float[widthX / this.scaling][heightY / this.scaling];
         this.nextFrame = new float[widthX / this.scaling][heightY / this.scaling];
     }
@@ -99,8 +105,7 @@ public abstract class CellularLogic {
     /**
      * Get the scaled width of the simulation and return it.
      *
-     * @return scaledX The scaled width of the simulation. It is an int
-     * value.
+     * @return scaledX The scaled width of the simulation. It is an int value.
      */
     public int getScaledX() {
         return scaledX;
@@ -109,8 +114,7 @@ public abstract class CellularLogic {
     /**
      * Get the scaled height of the simulation and return it.
      *
-     * @return scaledY The scaled height of the simulation. It is an int
-     * value.
+     * @return scaledY The scaled height of the simulation. It is an int value.
      */
     public int getScaledY() {
         return scaledY;
@@ -129,8 +133,7 @@ public abstract class CellularLogic {
     /**
      * Get the scaling factor of the simulation and return it.
      *
-     * @return scaling The scaling factor of the simulation. It is an int
-     * value.
+     * @return scaling The scaling factor of the simulation. It is an int value.
      */
     public int getScaling() {
         return scaling;
@@ -139,8 +142,7 @@ public abstract class CellularLogic {
     /**
      * Set the width of the simulation to the specified width.
      *
-     * @param widthX The specified width of the simulation. It is an int
-     * value.
+     * @param widthX The specified width of the simulation. It is an int value.
      */
     public void setWidthX(int widthX) {
         this.widthX = widthX;
@@ -196,6 +198,16 @@ public abstract class CellularLogic {
     }
 
     /**
+     * *
+     * TODO
+     *
+     * @param hasInitialized
+     */
+    public void setHasInitialized(boolean hasInitialized) {
+        this.hasInitialized = hasInitialized;
+    }
+
+    /**
      * Set a point in the entered vertical and horizontal position.
      *
      * @param x horizontal position in pixels on the canvas
@@ -239,13 +251,14 @@ public abstract class CellularLogic {
     }
 
     /**
-     * Clear the grid of simulation by resetting all grid cells to the background color.
+     * Clear the grid of simulation by resetting all grid cells to the
+     * background color.
      */
     public void clearScreen() {
         GraphicsContext Graphics = this.operatingCanvas.getGraphicsContext2D();
         Graphics.setFill(backgroundColor);
         Graphics.fillRect(0, 0, widthX, heightY);
-        System.out.println(widthX + "  "+heightY);
+        System.out.println(widthX + "  " + heightY);
     }
 
     /**
