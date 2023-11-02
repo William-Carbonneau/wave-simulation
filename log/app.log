@@ -326,3 +326,155 @@ Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for l
 08:53:22.700  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
 08:53:22.702  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
 08:53:22.704  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+08:54:32.824  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+08:54:33.026  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:54:33.028  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:54:33.030  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+08:55:06.751  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+08:55:06.958  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:55:06.960  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:55:06.962  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+08:56:53.131  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+08:56:53.328  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:56:53.329  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:56:53.331  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+08:57:10.061  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+08:57:10.263  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:57:10.265  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:57:10.267  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+08:57:51.493  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+08:57:51.691  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:57:51.693  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+08:57:51.695  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:05:38.403  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:05:38.611  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:05:38.613  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:05:38.614  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:07:54.168  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:07:54.371  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:07:54.373  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:07:54.374  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:09:26.034  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:09:26.235  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:09:26.237  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:09:26.239  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:09:57.397  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:09:57.599  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:09:57.601  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:09:57.603  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:11:12.593  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:11:12.811  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:11:12.813  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:11:12.816  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:11:40.823  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:11:41.024  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:11:41.026  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:11:41.028  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:13:29.898  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:13:30.102  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:13:30.104  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:13:30.106  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:14:06.678  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:14:06.883  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:14:06.885  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:14:06.887  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:14:12.629  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:14:12.831  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:14:12.833  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:14:12.835  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:16:35.914  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:16:36.113  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:16:36.115  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:16:36.116  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:16:54.955  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:16:55.156  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:16:55.158  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:16:55.160  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:17:36.099  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:17:36.299  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:17:36.301  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:17:36.303  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:17:49.169  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:17:49.370  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:17:49.372  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:17:49.374  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:18:01.219  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:18:01.424  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:18:01.427  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:18:01.429  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:18:57.832  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:18:58.024  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:18:58.025  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:18:58.027  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:19:57.158  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:19:57.362  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:19:57.364  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:19:57.366  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:20:07.648  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:20:07.848  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:20:07.849  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:20:07.851  [ERROR] e.v.w.m.SimRPC  msg: scaling is wrong, setting to 1 by default
+09:21:34.951  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:21:35.157  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:21:35.159  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:21:35.161  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:22:08.720  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:22:08.925  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:22:08.927  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:22:08.929  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:22:39.600  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:22:39.801  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:22:39.803  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:22:39.805  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:23:44.681  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:23:44.875  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:23:44.876  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:23:44.878  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:26:45.323  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:26:45.519  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:26:45.521  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:26:45.522  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:27:16.437  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:27:16.658  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:27:16.659  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:27:16.661  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:27:28.795  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:27:28.994  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:27:28.996  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:27:28.998  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:30:23.597  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:30:23.801  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:30:23.803  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:30:23.805  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:31:30.592  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:31:30.794  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:31:30.796  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:31:30.799  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:32:03.814  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:32:04.016  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:32:04.018  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:32:04.021  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:33:24.577  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:33:24.781  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:33:24.783  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:33:24.785  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:34:03.411  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:34:03.616  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:34:03.618  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:34:03.620  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:34:27.872  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:34:28.072  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:34:28.074  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:34:28.076  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:36:08.198  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:36:08.406  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:36:08.408  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:36:08.410  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:36:29.129  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:36:29.327  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:36:29.328  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:36:29.330  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:37:00.630  [INFO ] e.v.w.t.Driver  msg: Bootstrapping the application...
+09:37:00.831  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:37:00.833  [ERROR] e.v.w.m.SimLogicWave1 msg: scaling is wrong, setting to 1 by default
+09:37:00.835  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
