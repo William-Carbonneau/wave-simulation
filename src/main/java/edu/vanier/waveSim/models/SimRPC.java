@@ -40,8 +40,8 @@ public class SimRPC extends CellularLogic {
         for (int i = 0; i < scaledX; i++) {
             for (int j = 0; j < scaledY; j++) {
                 int color = (random.nextInt(nreOfDifferentEntities));
-                current[i][j] = color;
-                colorCell(i, j, colors[color]);
+                current[i][j] = (float) color;
+                colorCell(i, j, colors[color]);    
             }
         }
     }
@@ -63,14 +63,12 @@ public class SimRPC extends CellularLogic {
             }
         }
 
-        this.nextFrame = this.current;
-
         for (int i = 0; i < scaledX; i++) {
 
             for (int j = 0; j < scaledY; j++) {
 
                 int predatorStates = (nreOfDifferentEntities - 0) / 2;
-                System.out.println("Predator n: " + predatorStates);
+                //System.out.println("Predator n: " + predatorStates);
                 int[] predators = new int[predatorStates];
                 int nearPredators = 0;
 
@@ -79,7 +77,7 @@ public class SimRPC extends CellularLogic {
                     predators[k] = lookAround(i, j, predatorsList[k + 1]);
                     nearPredators += predators[k];
                 }
-
+                System.out.println(nearPredators);
                 int randomMinimum = random.nextInt(nreOfRandomPredator);
 
                 //If there are more neighbour predators than the threshold, change current cell to a random predator cell (weighted)
@@ -91,16 +89,18 @@ public class SimRPC extends CellularLogic {
                         r -= predators[k];
                     }
                     if (k < nreOfDifferentEntities) {
-                        this.nextFrame[i][j] = (k + 1);
+                        this.nextFrame[i][j] = (float) (k + 1);
                     } else if (k >= nreOfDifferentEntities) {
-                        this.nextFrame[i][j] = (k + 1 - nreOfDifferentEntities);
+                        this.nextFrame[i][j] = (float) (k + 1 - nreOfDifferentEntities);
                     }
                     colorCell(i, j, predatorsList[k + 1]);
                 }
 
             }
         }
+        float[][] temp = this.current;
         this.current = this.nextFrame;
+        this.nextFrame = temp;
         System.out.println("Frame " + frameNumber++);
 
     }
@@ -118,6 +118,7 @@ public class SimRPC extends CellularLogic {
                     } catch (ArrayIndexOutOfBoundsException e) {
                     }
                 }
+                System.out.println(c);
             }
         }
         return c;
