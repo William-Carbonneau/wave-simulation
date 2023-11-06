@@ -5,6 +5,7 @@
 package edu.vanier.waveSim.models;
 
 import java.util.Random;
+import java.util.logging.Level;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.paint.Color;
 import org.slf4j.Logger;
@@ -16,11 +17,12 @@ import org.slf4j.LoggerFactory;
  */
 public class SimRPC extends CellularLogic {
 
+    private int frameNumber = 0;
     private int nreOfDifferentEntities = 3;
     private int nreOfNeededPredator = 1;
     private int nreOfRandomPredator = 1;
-    private int delay = 330;
     Color[] colors = {Color.ORANGE, Color.YELLOW, Color.RED, Color.BLUE, Color.PURPLE, Color.GREEN, Color.GRAY, Color.HOTPINK};
+    Color[] predatorsList = new Color[colors.length * 2];
     private final static Logger logger = LoggerFactory.getLogger(SimRPC.class);
     private Random random = new Random();
 
@@ -50,49 +52,56 @@ public class SimRPC extends CellularLogic {
      */
     @Override
     public void simFrame() {
-        
+
         if (hasInitialized == false) {
             InitializeRandomColor();
             hasInitialized = true;
+            for (int i = 0; i < 1; i++) {
+                for (int j = 0; i < nreOfDifferentEntities; i++) {
+                    predatorsList[j] = colors[j];
+                }
+            }
         }
-        
+
         this.nextFrame = this.current;
 
         for (int i = 0; i < scaledX; i++) {
 
             for (int j = 0; j < scaledY; j++) {
 
-                int predatorStates = (nreOfDifferentEntities - 0) / 2; 
+                int predatorStates = (nreOfDifferentEntities - 0) / 2;
+                System.out.println("Predator n: " + predatorStates);
                 int[] predators = new int[predatorStates];
-                int[] predatorState = new int[predatorStates];
-                int gesamtPredators = 0;
+                int nearPredators = 0;
 
                 //Count number if neighbour predators for each predator state
                 for (int k = 0; k < predatorStates; k++) {
-                    predatorState[k] = (int) ((current[i][j] +1 +k) % nreOfDifferentEntities);
-                    predators[k] = lookAround(i, j, colors[(int) predatorState[k]]);
-                    gesamtPredators += predators[k];
+                    predators[k] = lookAround(i, j, predatorsList[k + 1]);
+                    nearPredators += predators[k];
                 }
 
                 int randomMinimum = random.nextInt(nreOfRandomPredator);
 
                 //If there are more neighbour predators than the threshold, change current cell to a random predator cell (weighted)
-                if (gesamtPredators >= nreOfRandomPredator + randomMinimum) {
-                    int r = random.nextInt(gesamtPredators);
+                if (nearPredators >= nreOfNeededPredator + randomMinimum && nearPredators > 0) {
+                    int r = random.nextInt(nearPredators);
                     int k = -1;
                     while (r >= 0) {
                         k++;
                         r -= predators[k];
                     }
-                    this.nextFrame[i][j] = predatorState[k];
-                    colorCell(i, j, colors[predatorState[k]]);
+                    if (k < nreOfDifferentEntities) {
+                        this.nextFrame[i][j] = (k + 1);
+                    } else if (k >= nreOfDifferentEntities) {
+                        this.nextFrame[i][j] = (k + 1 - nreOfDifferentEntities);
+                    }
+                    colorCell(i, j, predatorsList[k + 1]);
                 }
 
             }
-
         }
-
         this.current = this.nextFrame;
+        System.out.println("Frame " + frameNumber++);
 
     }
 
