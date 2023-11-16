@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 public class SimRPC extends CellularLogic {
 
     private int frameNumber = 0;
-    private int nreOfDifferentEntities = 1;
+    private int nreOfDifferentEntities = 8;
     private int nreOfNeededPredator = 1;
     private int nreOfRandomPredator = 1;
     Color[] colors = {Color.ORANGE, Color.YELLOW, Color.RED, Color.BLUE, Color.PURPLE, Color.GREEN, Color.GRAY, Color.HOTPINK};
@@ -63,7 +63,9 @@ public class SimRPC extends CellularLogic {
                 devouredOrNot(i, j);
             }
         }
-
+        
+        paintTheCanvas(scaledX, scaledY);
+        
         if (this.current.equals(this.nextFrame)) {
             System.out.println("the same");
         }
@@ -95,7 +97,7 @@ public class SimRPC extends CellularLogic {
             }
             predatorsInt[k] = predatorColorInt;
 
-            predators[k] = lookAround(x, y, colors[predatorColorInt]);
+            predators[k] = lookAround(x, y);
             nearPredators += predators[k];
         }
         int randomMinimum = random.nextInt(nreOfRandomPredator);
@@ -109,20 +111,30 @@ public class SimRPC extends CellularLogic {
                 r -= predators[k];
             }
             this.nextFrame[x][y] = (float) predatorsInt[k];
-            colorCell(x, y, colors[predatorsInt[k]]);
+            //colorCell(x, y, colors[predatorsInt[k]]);
 
         }
 
     }
 
-    public int lookAround(int x, int y, Color color) {
+    public void paintTheCanvas(int x, int y) {
+        for (int i = 0; i < x; i++) {
+
+            for (int j = 0; j < y; j++) {
+                colorCell(i, j, colors[(int)getCellState(i,j)]);
+            }
+        }
+    }
+
+    public int lookAround(int x, int y) {
         int c = 0;
         for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
+            for (int j = 0; j<3; j++) {
+                //Catches < 3; j++) {
                 if (i != 1 || j != 1) {
                     //Catches all the index that will be out of bound and ignore them
                     try {
-                        if (colors[(int) (getCellState(x + j - 1, y + i - 1) * nreOfDifferentEntities)] == color) {
+                        if (getCellState(x + j - 1, y + i - 1) == getCellState(x,y)) {
                             c++;
                         }
                     } catch (ArrayIndexOutOfBoundsException e) {
