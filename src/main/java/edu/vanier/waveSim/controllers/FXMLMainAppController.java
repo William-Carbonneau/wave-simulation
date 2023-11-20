@@ -1013,8 +1013,7 @@ public class FXMLMainAppController{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/helpGuide.fxml"));
         loader.setController(new FXMLHelpGuideController());
         Pane root = loader.load();
-        
-        Scene scene = new Scene(root, 400,400);
+        Scene scene = new Scene(root);
         Stage guideDialog = new Stage();
         guideDialog.setTitle("Help Dialog");
         guideDialog.setScene(scene);
