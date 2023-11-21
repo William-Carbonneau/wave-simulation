@@ -490,7 +490,7 @@ public class FXMLMainAppController{
                 // add the point to the ArrayList of current points.
                 pointList.add(clickPoint);
             }
-            if (simulation != simulationsList[4]) {
+            if (simulation != simulationsList[3]) {
                 // set the point in the simulation
                 simulation.setPoint(xFloor, yFloor);
                 // add the point to the canvas as Color.RED
@@ -500,7 +500,7 @@ public class FXMLMainAppController{
         }else if (animationRunning == false && pointList.contains(clickPoint)){
             pointList.remove(clickPoint);
             // if the point was removed from the array, remove from canvas.
-            if (simulation.removePoint(xFloor, yFloor) && simulation != simulationsList[4]) {
+            if (simulation.removePoint(xFloor, yFloor) && simulation != simulationsList[3]) {
                 simulation.colorCell(xFloorScaled, yFloorScaled, simulation.getBackgroundColor());
             }
         }
