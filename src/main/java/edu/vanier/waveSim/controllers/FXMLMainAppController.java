@@ -6,6 +6,7 @@ import edu.vanier.waveSim.models.CellularAnimTimer;
 import edu.vanier.waveSim.models.CellularLogic;
 import javafx.fxml.FXML;
 import edu.vanier.waveSim.models.ConwayGameOfLifeLogic;
+import edu.vanier.waveSim.models.SimBriansBrain;
 import edu.vanier.waveSim.models.SimLogicWave;
 import edu.vanier.waveSim.models.SimRPC;
 import java.io.File;
@@ -159,7 +160,7 @@ public class FXMLMainAppController{
     }
     
     HashSet<Point> pointList;
-    CellularLogic[] simulationsList = new CellularLogic[4];
+    CellularLogic[] simulationsList = new CellularLogic[5];
     CellularLogic simulation;
     CellularAnimTimer animation;
     
@@ -205,7 +206,7 @@ public class FXMLMainAppController{
     ObservableList<Integer> scaleChoiceItems = FXCollections.observableArrayList(1,2,4,6,8);
     
     //list of simulation types, simple wave, etc
-    ObservableList<String> simTypeChoiceItems = FXCollections.observableArrayList("Simple Ripple", "Conway's Game of Life", "Rock-Paper-Scissors");
+    ObservableList<String> simTypeChoiceItems = FXCollections.observableArrayList("Simple Ripple", "Conway's Game of Life", "Rock-Paper-Scissors", "Brian's Brain");
     
     
     
@@ -221,6 +222,7 @@ public class FXMLMainAppController{
 
         SimLogicWave WaveSim = new SimLogicWave(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
         ConwayGameOfLifeLogic Conway = new ConwayGameOfLifeLogic(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
+        SimBriansBrain Brain = new SimBriansBrain(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
         SimRPC RPC = new SimRPC(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
         // initialize default simulation
         simulation = WaveSim;
@@ -229,6 +231,7 @@ public class FXMLMainAppController{
         simulationsList[1] = WaveSim;
         simulationsList[2] = Conway;
         simulationsList[3] = RPC;
+        simulationsList[4] = Brain;
         
         
         
@@ -457,6 +460,10 @@ public class FXMLMainAppController{
                     simulation = simulations[3];
                     return simulation;                    
                 }
+                case "Brian's Brain"->{
+                    simulation = simulations[4];
+                    return simulation;
+                }
                 default -> {
                     return simulation;
                 }
@@ -483,7 +490,7 @@ public class FXMLMainAppController{
                 // add the point to the ArrayList of current points.
                 pointList.add(clickPoint);
             }
-            if (simulation != simulationsList[3]) {
+            if (simulation != simulationsList[4]) {
                 // set the point in the simulation
                 simulation.setPoint(xFloor, yFloor);
                 // add the point to the canvas as Color.RED
@@ -493,7 +500,7 @@ public class FXMLMainAppController{
         }else if (animationRunning == false && pointList.contains(clickPoint)){
             pointList.remove(clickPoint);
             // if the point was removed from the array, remove from canvas.
-            if (simulation.removePoint(xFloor, yFloor) && simulation != simulationsList[3]) {
+            if (simulation.removePoint(xFloor, yFloor) && simulation != simulationsList[4]) {
                 simulation.colorCell(xFloorScaled, yFloorScaled, simulation.getBackgroundColor());
             }
         }
