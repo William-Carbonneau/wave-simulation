@@ -1,9 +1,108 @@
-14:00:46.316  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-14:00:46.619  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-14:00:46.621  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-14:00:46.629  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-14:00:46.629  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-14:00:46.631  [ERROR] e.v.w.MainApp   msg: 
+16:26:10.045  [INFO ] e.v.w.u.Driver  msg: Bootstrapping the application...
+16:26:10.213  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:26:10.215  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+23:15:57.468  [INFO ] e.v.w.u.Driver  msg: Bootstrapping the application...
+23:15:57.676  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+23:15:57.678  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+23:27:22.473  [INFO ] e.v.w.u.Driver  msg: Bootstrapping the application...
+23:27:22.706  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+23:27:22.707  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+23:45:59.147  [INFO ] e.v.w.u.Driver  msg: Bootstrapping the application...
+23:45:59.368  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+23:45:59.371  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+23:54:48.192  [INFO ] e.v.w.u.Driver  msg: Bootstrapping the application...
+23:54:48.390  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+23:54:48.391  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+21:31:29.547  [INFO ] e.v.w.u.Driver  msg: Bootstrapping the application...
+21:31:29.907  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+21:31:29.910  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+21:35:10.056  [INFO ] e.v.w.u.Driver  msg: Bootstrapping the application...
+21:35:10.268  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+21:35:10.270  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+08:04:39.229  [INFO ] e.v.w.u.Driver  msg: Bootstrapping the application...
+08:04:39.442  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+08:04:39.443  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+08:16:29.555  [INFO ] e.v.w.u.Driver  msg: Bootstrapping the application...
+08:16:29.768  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+08:16:29.770  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+08:47:54.956  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+08:47:55.169  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+08:47:55.171  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+08:47:55.173  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+08:50:44.495  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+08:50:44.707  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+08:50:44.709  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+08:50:44.711  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+08:58:58.474  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+08:58:58.666  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+08:58:58.668  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+08:58:58.670  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+08:59:34.228  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+08:59:34.433  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+08:59:34.434  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+08:59:34.437  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:09:59.513  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+09:09:59.725  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+09:09:59.727  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+09:09:59.729  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:10:38.137  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+09:10:38.340  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+09:10:38.342  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+09:10:38.344  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:44:00.839  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+09:44:01.094  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+09:44:01.095  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+09:44:01.098  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+09:45:31.311  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+09:45:31.561  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+09:45:31.564  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+09:45:31.566  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+11:07:15.521  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+11:07:15.763  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+11:07:15.765  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+11:07:15.768  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+12:50:11.187  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+12:50:11.429  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+12:50:11.431  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+12:50:11.433  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:49:19.000  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:49:19.193  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:49:19.193  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:49:19.194  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:52:09.091  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:52:09.287  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:52:09.288  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:52:09.289  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:57:13.488  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:57:13.675  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:57:13.676  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:57:13.677  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+17:04:25.658  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+17:04:25.854  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+17:04:25.855  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+17:04:25.856  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+17:08:42.864  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+17:08:43.055  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+17:08:43.056  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+17:08:43.057  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+17:09:15.323  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+17:09:15.495  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+17:09:15.496  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+17:09:15.497  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+17:10:09.872  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+17:10:10.061  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+17:10:10.062  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+17:10:10.064  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+15:10:45.717  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+15:10:45.944  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+15:10:45.945  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+15:10:45.946  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+15:13:48.080  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+15:13:48.324  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+15:13:48.325  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+15:13:48.327  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+15:13:48.335  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+15:13:48.336  [ERROR] e.v.w.MainApp   msg: 
 /C:/Users/loovd/OneDrive/Documents/GitHub/wave-simulation/build/resources/main/fxml/mainAppFXML.fxml
 
 javafx.fxml.LoadException: 
@@ -39,352 +138,123 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 4
 	at edu.vanier.waveSim.controllers.FXMLMainAppController.initialize(FXMLMainAppController.java:234)
 	... 23 common frames omitted
-14:03:48.015  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-14:03:48.332  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-14:03:48.334  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-14:03:48.342  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-14:03:48.343  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-14:03:48.344  [ERROR] e.v.w.MainApp   msg: 
-/C:/Users/loovd/OneDrive/Documents/GitHub/wave-simulation/build/resources/main/fxml/mainAppFXML.fxml
-
-javafx.fxml.LoadException: 
-/C:/Users/loovd/OneDrive/Documents/GitHub/wave-simulation/build/resources/main/fxml/mainAppFXML.fxml
-
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2722)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2692)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
-	at edu.vanier.waveSim.MainApp.start(MainApp.java:41)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
-	at javafx.graphics@20.0.2/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
-	at javafx.graphics@20.0.2/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@20.0.2/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: java.lang.reflect.InvocationTargetException: null
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at javafx.base@20.0.2/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at javafx.fxml@20.0.2/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2688)
-	... 12 common frames omitted
-Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 4
-	at edu.vanier.waveSim.controllers.FXMLMainAppController.initialize(FXMLMainAppController.java:234)
-	... 23 common frames omitted
-14:04:17.116  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-14:04:17.382  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-14:04:17.383  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-14:04:17.385  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-14:04:17.392  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-14:04:17.394  [ERROR] e.v.w.MainApp   msg: 
-/C:/Users/loovd/OneDrive/Documents/GitHub/wave-simulation/build/resources/main/fxml/mainAppFXML.fxml
-
-javafx.fxml.LoadException: 
-/C:/Users/loovd/OneDrive/Documents/GitHub/wave-simulation/build/resources/main/fxml/mainAppFXML.fxml
-
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2722)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2692)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
-	at edu.vanier.waveSim.MainApp.start(MainApp.java:41)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
-	at javafx.graphics@20.0.2/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
-	at javafx.graphics@20.0.2/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@20.0.2/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: java.lang.reflect.InvocationTargetException: null
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at javafx.base@20.0.2/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at javafx.fxml@20.0.2/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2688)
-	... 12 common frames omitted
-Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 4
-	at edu.vanier.waveSim.controllers.FXMLMainAppController.initialize(FXMLMainAppController.java:234)
-	... 23 common frames omitted
-14:04:32.340  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-14:04:32.658  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-14:04:32.659  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-14:04:32.661  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-14:04:32.670  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-14:04:32.670  [ERROR] e.v.w.MainApp   msg: 
-/C:/Users/loovd/OneDrive/Documents/GitHub/wave-simulation/build/resources/main/fxml/mainAppFXML.fxml
-
-javafx.fxml.LoadException: 
-/C:/Users/loovd/OneDrive/Documents/GitHub/wave-simulation/build/resources/main/fxml/mainAppFXML.fxml
-
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2722)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2692)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
-	at edu.vanier.waveSim.MainApp.start(MainApp.java:41)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
-	at javafx.graphics@20.0.2/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
-	at javafx.graphics@20.0.2/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@20.0.2/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: java.lang.reflect.InvocationTargetException: null
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at javafx.base@20.0.2/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at javafx.fxml@20.0.2/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2688)
-	... 12 common frames omitted
-Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 4
-	at edu.vanier.waveSim.controllers.FXMLMainAppController.initialize(FXMLMainAppController.java:234)
-	... 23 common frames omitted
-14:06:49.189  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-14:06:49.414  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-14:06:49.415  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-14:06:49.424  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-14:06:49.425  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-14:06:49.425  [ERROR] e.v.w.MainApp   msg: 
-/C:/Users/loovd/OneDrive/Documents/GitHub/wave-simulation/build/resources/main/fxml/mainAppFXML.fxml
-
-javafx.fxml.LoadException: 
-/C:/Users/loovd/OneDrive/Documents/GitHub/wave-simulation/build/resources/main/fxml/mainAppFXML.fxml
-
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2722)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2692)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
-	at edu.vanier.waveSim.MainApp.start(MainApp.java:41)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
-	at javafx.graphics@20.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
-	at javafx.graphics@20.0.2/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
-	at javafx.graphics@20.0.2/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@20.0.2/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: java.lang.reflect.InvocationTargetException: null
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at javafx.base@20.0.2/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at javafx.fxml@20.0.2/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml@20.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2688)
-	... 12 common frames omitted
-Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 4
-	at edu.vanier.waveSim.controllers.FXMLMainAppController.initialize(FXMLMainAppController.java:234)
-	... 23 common frames omitted
-14:07:36.862  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-14:07:37.086  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-14:07:37.087  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-14:07:37.095  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-14:07:37.096  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-14:08:15.686  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-14:08:15.948  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-14:08:15.949  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-14:08:15.957  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-14:08:15.957  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-14:09:36.876  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-14:09:37.108  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-14:09:37.109  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-14:09:37.118  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-14:09:37.119  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-14:26:39.529  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-14:26:39.769  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-14:26:39.770  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-14:26:39.772  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-14:26:39.781  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-14:29:29.995  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-14:29:30.261  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-14:29:30.262  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-14:29:30.264  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-14:29:30.271  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-14:30:41.106  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-14:30:41.361  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-14:30:41.363  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-14:30:41.365  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-14:30:41.373  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-14:31:11.610  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-14:31:11.842  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-14:31:11.842  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-14:31:11.844  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-14:31:11.851  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-14:33:19.395  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-14:33:19.658  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-14:33:19.659  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-14:33:19.669  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-14:33:19.670  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-14:35:59.432  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-14:35:59.656  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-14:35:59.657  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-14:35:59.659  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-14:35:59.666  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-16:42:00.862  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-16:42:01.131  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-16:42:01.132  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-16:42:01.134  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-16:42:01.141  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-16:43:41.968  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-16:43:42.231  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-16:43:42.233  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-16:43:42.234  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-16:43:42.242  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-16:44:45.375  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-16:44:45.611  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-16:44:45.612  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-16:44:45.620  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-16:44:45.622  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-16:50:23.283  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-16:50:23.561  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-16:50:23.562  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-16:50:23.564  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-16:50:23.572  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-16:50:46.107  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-16:50:46.337  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-16:50:46.338  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-16:50:46.346  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-16:50:46.347  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-16:54:55.048  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-16:54:55.283  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-16:54:55.284  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-16:54:55.285  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-16:54:55.292  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-16:58:56.511  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-16:58:56.741  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-16:58:56.742  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-16:58:56.750  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-16:58:56.751  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-16:59:25.130  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-16:59:25.362  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-16:59:25.363  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-16:59:25.364  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-16:59:25.373  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:03:24.643  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:03:24.857  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:03:24.859  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:03:24.868  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:03:24.869  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:04:45.681  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:04:45.902  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:04:45.903  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:04:45.911  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:04:45.912  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:07:51.639  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:07:51.867  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:07:51.868  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:07:51.875  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:07:51.876  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:16:04.649  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:16:04.870  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:16:04.871  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:16:04.872  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:16:04.879  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:16:19.971  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:16:20.201  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:16:20.202  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:16:20.205  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:16:20.211  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:17:11.470  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:17:11.723  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:17:11.724  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:17:11.725  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:17:11.733  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:24:25.957  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:24:26.232  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:24:26.233  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:24:26.241  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:24:26.243  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:32:22.303  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:32:22.541  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:32:22.542  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:32:22.548  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:32:22.550  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:35:04.438  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:35:04.731  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:35:04.732  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:35:04.739  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:35:04.741  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:44:24.967  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:44:25.282  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:44:25.283  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:44:25.284  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:44:25.292  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:49:21.937  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:49:22.191  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:49:22.192  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:49:22.194  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:49:22.202  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:51:59.703  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:51:59.979  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:51:59.981  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:51:59.988  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:51:59.990  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:52:36.672  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:52:36.918  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:52:36.919  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:52:36.921  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:52:36.929  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:55:02.465  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:55:02.748  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:55:02.749  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:55:02.751  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:55:02.758  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:57:18.485  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:57:18.754  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:57:18.756  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:57:18.758  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:57:18.765  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-17:57:57.444  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-17:57:57.710  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-17:57:57.711  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-17:57:57.713  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-17:57:57.723  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-18:01:00.180  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-18:01:00.507  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-18:01:00.508  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-18:01:00.516  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-18:01:00.517  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-18:05:56.984  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-18:05:57.233  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-18:05:57.234  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-18:05:57.236  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-18:05:57.248  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-18:12:06.261  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-18:12:06.519  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-18:12:06.520  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-18:12:06.522  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-18:12:06.532  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
-13:56:16.503  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
-13:56:16.745  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
-13:56:16.746  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
-13:56:16.754  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
-13:56:16.755  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+15:14:22.594  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+15:14:22.816  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+15:14:22.818  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+15:14:22.825  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+15:14:22.827  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+15:16:46.896  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+15:16:47.141  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+15:16:47.143  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+15:16:47.151  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+15:16:47.153  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+15:23:19.456  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+15:23:19.689  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+15:23:19.690  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+15:23:19.691  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+15:23:19.699  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+15:25:36.268  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+15:25:36.508  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+15:25:36.509  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+15:25:36.510  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+15:25:36.518  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+15:27:56.644  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+15:27:56.878  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+15:27:56.878  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+15:27:56.879  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+15:27:56.888  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+15:29:25.065  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+15:29:25.328  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+15:29:25.329  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+15:29:25.337  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+15:29:25.340  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+15:30:07.812  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+15:30:08.073  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+15:30:08.074  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+15:30:08.076  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+15:30:08.084  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+15:31:40.987  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+15:31:41.233  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+15:31:41.234  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+15:31:41.241  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+15:31:41.243  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+16:01:29.576  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:01:29.820  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:01:29.821  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:01:29.829  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:01:29.831  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+16:02:06.774  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:02:07.001  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:02:07.002  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:02:07.003  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:02:07.011  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+16:04:45.962  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:04:46.208  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:04:46.209  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:04:46.216  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:04:46.218  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+16:05:33.866  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:05:34.090  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:05:34.090  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:05:34.091  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:05:34.098  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+16:06:07.126  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:06:07.354  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:06:07.355  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:06:07.356  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:06:07.364  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+16:08:28.210  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:08:28.455  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:08:28.457  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:08:28.466  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:08:28.469  [INFO ] e.v.w.m.SimLangtonAnt msg: scaling is not set, setting to 1 by default
+16:38:39.366  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:38:39.706  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:38:39.707  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:38:39.715  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:38:39.717  [INFO ] e.v.w.m.ForestFire msg: scaling is not set, setting to 1 by default
+16:41:45.952  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:41:46.214  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:41:46.216  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:41:46.217  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:41:46.226  [INFO ] e.v.w.m.ForestFire msg: scaling is not set, setting to 1 by default
+16:42:31.418  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:42:31.662  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:42:31.663  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:42:31.671  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:42:31.673  [INFO ] e.v.w.m.ForestFire msg: scaling is not set, setting to 1 by default
+16:43:28.984  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:43:29.213  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:43:29.214  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:43:29.215  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:43:29.223  [INFO ] e.v.w.m.ForestFire msg: scaling is not set, setting to 1 by default
+16:44:21.345  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:44:21.671  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:44:21.672  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:44:21.680  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:44:21.681  [INFO ] e.v.w.m.ForestFire msg: scaling is not set, setting to 1 by default
+16:44:57.120  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:44:57.360  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:44:57.361  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:44:57.368  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:44:57.371  [INFO ] e.v.w.m.ForestFire msg: scaling is not set, setting to 1 by default
+16:46:09.631  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:46:09.910  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:46:09.911  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:46:09.918  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:46:09.919  [INFO ] e.v.w.m.ForestFire msg: scaling is not set, setting to 1 by default
+16:48:18.268  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:48:18.553  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:48:18.555  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:48:18.556  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:48:18.566  [INFO ] e.v.w.m.ForestFire msg: scaling is not set, setting to 1 by default
+16:48:44.774  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:48:45.051  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:48:45.053  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:48:45.060  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:48:45.062  [INFO ] e.v.w.m.ForestFire msg: scaling is not set, setting to 1 by default
+16:51:19.268  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+16:51:19.530  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+16:51:19.531  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+16:51:19.541  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+16:51:19.543  [INFO ] e.v.w.m.ForestFire msg: scaling is not set, setting to 1 by default
