@@ -383,3 +383,8 @@ Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for l
 18:12:06.520  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
 18:12:06.522  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
 18:12:06.532  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+13:56:16.503  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+13:56:16.745  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+13:56:16.746  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+13:56:16.754  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
+13:56:16.755  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
