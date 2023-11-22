@@ -14,14 +14,14 @@ import org.slf4j.LoggerFactory;
  *
  * @author loovd
  */
-public class ForestFire extends CellularLogic{
-    private final static Logger logger = LoggerFactory.getLogger(ForestFire.class);
+public class SimForestFire extends CellularLogic{
+    private final static Logger logger = LoggerFactory.getLogger(SimForestFire.class);
     private boolean needToInitialize = true;
     private double fire;
     private double tree;
     
 
-    public ForestFire(Canvas operatingCanvas, int widthX, int heightY, int scale) {
+    public SimForestFire(Canvas operatingCanvas, int widthX, int heightY, int scale) {
         super(operatingCanvas, widthX, heightY);
         // deal with scaling
         if (scale < 1 || scale % 2 != 0) {
