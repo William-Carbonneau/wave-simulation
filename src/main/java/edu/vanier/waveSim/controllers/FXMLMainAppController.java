@@ -786,6 +786,16 @@ public class FXMLMainAppController{
                 System.out.println("Error in the program: "+ex.toString());
        }
         }
+        // Order:
+        /*
+        Damping
+        scale choice
+        sim type
+        speed
+        width and height of canvas and parimary stage
+        frame limit
+        points
+        */
         try(FileWriter fw = new FileWriter(file.getPath());
             PrintWriter writer = new PrintWriter(fw);){
             //Erase previous save settings
@@ -798,19 +808,25 @@ public class FXMLMainAppController{
             writer.write(simTypeChoice.getValue().toString()+",");
             // Write speed
             writer.write(Double.toString(sldrSpeed.getValue())+",");
-            //Write points
-            for(Iterator<Point> points = pointList.iterator(); points.hasNext();){
-                Point currentPoint = points.next();
-                writer.write(Integer.toString(currentPoint.getX()*simulation.getScaling())+","+Integer.toString(currentPoint.getY()*simulation.getScaling())+",");
-            }
             //Write the properties of the canvas and the stage
             writer.write(Double.toString(simulation.getOperatingCanvas().getWidth())+",");
             writer.write(Double.toString(simulation.getOperatingCanvas().getHeight())+",");
             writer.write(Double.toString(primaryStage.getWidth())+",");
             writer.write(Double.toString(primaryStage.getHeight())+",");
             //Write the frame limit
-            writer.write(Integer.toString(this.getFrameLim()));
+            writer.write(Integer.toString(this.getFrameLim())+",");
+            //Write points
+            for(Iterator<Point> points = pointList.iterator(); points.hasNext();){
+                Point currentPoint = points.next();
+                if(!points.hasNext()){
+                    writer.write(Integer.toString(currentPoint.getX()*simulation.getScaling())+","+Integer.toString(currentPoint.getY()*simulation.getScaling()));
+                    break;
+                }
+                writer.write(Integer.toString(currentPoint.getX()*simulation.getScaling())+","+Integer.toString(currentPoint.getY()*simulation.getScaling())+",");
+            }
             writer.write("\n");
+        }catch(Exception e){
+            System.out.println(e.toString());
         }
     }
     /**
@@ -855,14 +871,14 @@ public class FXMLMainAppController{
     
     private void loadPointsUtil() {
         int x,y;
-            for(int counterIndex = 0; counterIndex<((settings.length-8)/2); counterIndex++){
+            for(int counterIndex = 0; counterIndex<((settings.length-9)/2); counterIndex++){
                 x=0;
                 y=0;
                 for(int counterCoordinates=0; counterCoordinates<2; counterCoordinates++){
                     if(counterCoordinates==0)
-                        x=Integer.parseInt(settings[(counterIndex*2)+4]);
+                        x=Integer.parseInt(settings[(counterIndex*2)+9]);
                     else
-                        y=Integer.parseInt(settings[(counterIndex*2)+5]);
+                        y=Integer.parseInt(settings[(counterIndex*2)+10]);
                 }
                 
                 newPoint((double)x, (double)y, simulation);
@@ -890,13 +906,21 @@ public class FXMLMainAppController{
             return;
         }
         CSVReader reader = new CSVReader(new FileReader(file.getPath()));
-        int saveOption = 0;
-        settings = reader.readAll().get(saveOption);
+        settings = reader.readAll().get(0);
         verifyFileSettings(settings);
         this.primaryStage.setAlwaysOnTop(true);
-        
+        // Order:
+        /*
+        Damping
+        scale choice
+        sim type
+        speed
+        width and height of canvas and parimary stage
+        frame limit
+        points
+        */
             // Set height and width
-            setStageDimensions(Double.parseDouble(settings[settings.length-3]),Double.parseDouble(settings[settings.length-2]));
+            setStageDimensions(Double.parseDouble(settings[6]),Double.parseDouble(settings[7]));
             //Set scaling
             simulation.setScaling(Integer.parseInt(settings[1]));
             // Set the damping
@@ -993,11 +1017,18 @@ public class FXMLMainAppController{
         return isValid;
     }
     private boolean verifyFileSettings(String[] info) throws IOException, CsvException{
+        /*
+        Damping
+        scale choice
+        sim type
+        speed
+        width and height of canvas and parimary stage
+        frame limit
+        points
+        */
         boolean isValid=true;
-        if(info.length<8){
-            showAlert("The file does not contain enough information for the load settings to work. Please use another one, "
-                    + "containing at least the damping, the scaling, the simulation type, the speed, zero or more "
-                    + "points coordinates, the width and height of the canvas and the window.");
+        if(info.length<9){
+            showAlert("The file does not contain the minimum amount of information required to load a simulation.");
             isValid = false;
         }
             
@@ -1026,7 +1057,7 @@ public class FXMLMainAppController{
             isValid = false;
         }
         //Check simulation type
-        String[] simulationTypes = {"Simple Ripple", "Conway's Game of Life", "Rock-Paper-Scissors"};
+        String[] simulationTypes = {"Simple Ripple", "Conway's Game of Life", "Rock-Paper-Scissors", "Brian's Brain", "Forest Fire"};
         boolean isOneOfTypes = false;
         for(String element:simulationTypes)
             if(element.equals(info[2]))
@@ -1057,46 +1088,46 @@ public class FXMLMainAppController{
         double widthCanvas=0;
         double heightCanvas=0;
         try{
-            widthCanvas = Double.parseDouble(info[info.length-5]);
+            widthCanvas = Double.parseDouble(info[4]);
             if(widthCanvas<1){
-                showAlert("The value at the "+(info.length-4)+"th position should be a number corresponding to the width of the canvas. It should be bigger than 0. However, it is inferior to 1.");
+                showAlert("The value at the "+(3)+"th position should be a number corresponding to the width of the canvas. It should be bigger than 0. However, it is inferior to 1.");
             }
         }catch(Exception e){
-            showAlert("The value at the "+(info.length-4)+"th position should be a number corresponding to the width of the canvas. However, it does not look like a number.");
+            showAlert("The value at the "+(3)+"th position should be a number corresponding to the width of the canvas. However, it does not look like a number.");
             isValid=false;
         }
         //Height
         try{
-            heightCanvas = Double.parseDouble(info[info.length-4]);
+            heightCanvas = Double.parseDouble(info[5]);
             if(heightCanvas<1){
-                showAlert("The value at the "+(info.length-3)+"th position should be a number corresponding to the height of the canvas. It should be bigger than 0. However, it is inferior to 1.");
+                showAlert("The value at the "+(4)+"th position should be a number corresponding to the height of the canvas. It should be bigger than 0. However, it is inferior to 1.");
             }
         }catch(Exception e){
-            showAlert("The value at the "+(info.length-3)+"th position should be a number corresponding to the height of the canvas. However, it does not look like a number.");
+            showAlert("The value at the "+(4)+"th position should be a number corresponding to the height of the canvas. However, it does not look like a number.");
             isValid=false;
         }
         // Go through every point to check if they are valid
         if(numOfCoordinates!=0){
             for(int counter=0; counter<numOfCoordinates; counter++){
                 try{
-                    int coordinate = Integer.parseInt(info[4+counter]);
+                    int coordinate = Integer.parseInt(info[9+counter]);
                     // Verify of the coordinates are within the proper bounds
                     //x value
                     if(counter%2==0){
                         if((double)coordinate>(widthCanvas)||coordinate<0){
-                            showAlert("The x-coordinate at the "+(counter+5)+"th position is out of bounds. It should be between 0 and "+widthCanvas);
+                            showAlert("The x-coordinate at the "+(10+counter)+"th position is out of bounds. It should be between 0 and "+widthCanvas);
                             isValid = false;
                         }
                     }
                     //y value
                     if(counter%2==1){
                         if((double)coordinate>(heightCanvas)||coordinate<0){
-                            showAlert("The y-coordinate at the "+(counter+5)+"th position is out of bounds. It should be between 0 and "+heightCanvas);
+                            showAlert("The y-coordinate at the "+(10+counter)+"th position is out of bounds. It should be between 0 and "+heightCanvas);
                             isValid = false;
                         }
                     }
                 }catch(Exception e){
-                    showAlert("The value at the "+(5+counter)+"th position should be an integer corresponding to a coordinate inside the canvas. However, it does not look like an integer. Please try again, using a valid file.");
+                    showAlert("The value at the "+(11+counter)+"th position should be an integer corresponding to a coordinate inside the canvas. However, it does not look like an integer. Please try again, using a valid file.");
                     isValid=false;
                 }
             }
@@ -1105,35 +1136,35 @@ public class FXMLMainAppController{
         // Verify stage dimensions
         // Width
         try{
-            double widthStage = Double.parseDouble(info[info.length-3]);
+            double widthStage = Double.parseDouble(info[6]);
             if(widthStage<1){
-                showAlert("The value at the "+(info.length-2)+"th position should be a number corresponding to the width of the window. It should be bigger than 0. However, it is inferior to 1.");
+                showAlert("The value at the "+(5)+"th position should be a number corresponding to the width of the window. It should be bigger than 0. However, it is inferior to 1.");
             }
         }catch(Exception e){
-            showAlert("The value at the "+(info.length-2)+"th position should be a number corresponding to the width of the window. However, it does not look like a number.");
+            showAlert("The value at the "+(5)+"th position should be a number corresponding to the width of the window. However, it does not look like a number.");
             isValid=false;
         }
         //Height
         try{
-            double heightStage = Double.parseDouble(info[info.length-2]);
+            double heightStage = Double.parseDouble(info[7]);
             if(heightStage<1){
-                showAlert("The value at the "+(info.length-1)+"th position should be a number corresponding to the height of the window. It should be bigger than 0. However, it is inferior to 1.");
+                showAlert("The value at the "+(6)+"th position should be a number corresponding to the height of the window. It should be bigger than 0. However, it is inferior to 1.");
             }
         }catch(Exception e){
-            showAlert("The value at the "+(info.length-1)+"th position should be a number corresponding to the height of the window. However, it does not look like a number.");
+            showAlert("The value at the "+(6)+"th position should be a number corresponding to the height of the window. However, it does not look like a number.");
             isValid=false;
         }
         //Verification for the frame limit here
         try{
-            int frameLim = Integer.parseInt(info[info.length-1]);
+            int frameLim = Integer.parseInt(info[8]);
             if(frameLim<0){
                 showAlert("The value of the frame limit is invalid, because it is negative. Please try again with a file that has a positive value for the frame limit.");
-                System.out.println("Frame limit ="+info[info.length-1]);
+                System.out.println("Frame limit ="+info[8]);
                 isValid=false;
             }
         }catch(Exception e){
             showAlert("The value corresponding to the frame limit is invalid. It does not appear to be a number. Please try again with a valid file.");
-            System.out.println("Frame limit ="+info[info.length-1]);
+            System.out.println("Frame limit ="+info[8]);
             isValid = false;
         }
         return isValid;

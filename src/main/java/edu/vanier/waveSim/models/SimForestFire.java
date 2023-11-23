@@ -35,7 +35,7 @@ public class SimForestFire extends CellularLogic{
        public void simFrame() {
            if(needToInitialize){
                fire = 0.01;
-               tree=0.7;
+               tree=1;
                needToInitialize=false;
                for(int counterX = 1; counterX<scaledX-1; counterX++){
                    for(int counterY =1; counterY<scaledY-1; counterY++){
