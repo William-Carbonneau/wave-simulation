@@ -188,10 +188,24 @@ public class FXMLMainAppController{
     private String csvViewRender = null;
     private int imageSequenceIndex = 0;
     
+    private void adjustDimensionsRender(String pathCsv){
+        try{
+        File file = new File(pathCsv);
+        CSVReader reader = new CSVReader(new FileReader(file.getPath()));
+        String[] settingsRender = reader.readAll().get(0);
+        primaryStage.setWidth(Double.parseDouble(settingsRender[0]));
+        primaryStage.setHeight(Double.parseDouble(settingsRender[1]));
+        viewRenderAnchorPane.setPrefWidth(Double.parseDouble(settingsRender[2]));
+        viewRenderAnchorPane.setPrefHeight(Double.parseDouble(settingsRender[3]));
+        }catch(Exception e){
+            System.out.println("File not found. Dimensions stay the same");
+        }
+    }
     private void nextViewRenderFrame(ActionEvent event) {
         if (!hasLoadedViewFolder) {
             return;
         }
+        
         System.out.println(folderFiles.size());
         if (imageSequenceIndex < folderFiles.size()) {
             imageViewSequence.setImage(new Image(folderFiles.get(imageSequenceIndex)));
@@ -200,7 +214,6 @@ public class FXMLMainAppController{
             imageSequenceIndex = 0; // restart from beginning
         }
     }
-    
     private boolean getFileList() {
         File folder = new File("");
         Stage stage = new Stage();
@@ -235,7 +248,9 @@ public class FXMLMainAppController{
                         //bad, more than one csv
                         csvViewRender = null;
                     }
-                    csvViewRender = nFile;
+                    csvViewRender = folder+"\\"+nFile;
+                    System.out.println(csvViewRender);
+                    adjustDimensionsRender(csvViewRender);
                 }
                 folderFiles.remove(nFile);
             }else {
@@ -410,6 +425,7 @@ public class FXMLMainAppController{
         btnResetRender.setDisable(true);
         
         btnPlayRender.setOnAction((event) -> {
+            
             viewRenderTimer.play();
             btnPlayRender.setDisable(true);
             btnPauseRender.setDisable(false);
