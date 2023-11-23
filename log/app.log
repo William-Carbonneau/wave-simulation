@@ -96,3 +96,17 @@
 14:03:23.290  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
 14:03:23.291  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
 14:03:23.291  [INFO ] e.v.w.m.SimForestFire msg: scaling is not set, setting to 1 by default
+14:19:38.456  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+14:19:38.673  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+14:19:38.674  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+14:19:38.680  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
+14:19:38.681  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+14:19:38.682  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
+14:19:38.682  [INFO ] e.v.w.m.SimForestFire msg: scaling is not set, setting to 1 by default
+14:23:49.868  [INFO ] e.v.w.MainApp   msg: Bootstrapping the application...
+14:23:50.073  [INFO ] e.v.w.m.SimLogicWave msg: scaling is not set, setting to 1 by default
+14:23:50.074  [INFO ] e.v.w.m.ConwayGameOfLifeLogic msg: scaling is not set, setting to 1 by default
+14:23:50.080  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
+14:23:50.081  [INFO ] e.v.w.m.SimRPC  msg: scaling is not set, setting to 1 by default
+14:23:50.082  [INFO ] e.v.w.m.SimBriansBrain msg: scaling is not set, setting to 1 by default
+14:23:50.082  [INFO ] e.v.w.m.SimForestFire msg: scaling is not set, setting to 1 by default

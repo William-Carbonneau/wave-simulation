@@ -49,6 +49,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -286,6 +287,7 @@ public class FXMLMainAppController{
     @FXML private ImageView imageViewSequence;
     @FXML private Button btnPlayRender;
     @FXML private Button btnLoad;
+    @FXML private AnchorPane viewRenderAnchorPane;
     
     // list of choices for scale factor, 1 and then multiples of 2 (for math reasons)
     ObservableList<Integer> scaleChoiceItems = FXCollections.observableArrayList(1,2,4,6,8);
@@ -655,9 +657,19 @@ public class FXMLMainAppController{
         
         // create directory
         new File(path).mkdirs();
+        saveDimensions(path);
         handlePlayBtn(simulation, animation);
     }
-    
+    public void saveDimensions(String path){
+        try(FileWriter fw = new FileWriter(path+"\\"+"dimensions.csv");
+            PrintWriter writer = new PrintWriter(fw);){
+            writer.write(Double.toString(primaryStage.getWidth())+",");
+            writer.write(Double.toString(primaryStage.getHeight())+",");
+            writer.write(Double.toString(viewRenderAnchorPane.getWidth())+",");
+            writer.write(Double.toString(viewRenderAnchorPane.getHeight()));
+        }catch(Exception e){
+        }
+    }
     /**
      * TODO
      */

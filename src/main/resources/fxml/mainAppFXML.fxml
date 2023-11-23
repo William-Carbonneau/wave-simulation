@@ -242,7 +242,7 @@
             </Tab>
             <Tab text="View Render">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <AnchorPane fx:id="viewRenderAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <VBox fx:id="SimVBox1" prefHeight="472.0" prefWidth="548.0">
                            <children>
