@@ -277,6 +277,8 @@ public class FXMLMainAppController{
     @FXML private TextField txtBoxRippleLimit;
     @FXML private TextField txtBoxConwayLimit;
     @FXML private TextField txtBoxRPCLimit;
+    @FXML private TextField txtBoxBBLimit;
+    @FXML private TextField txtBoxFFLimit;
     @FXML
     private Label amplitudeLbl;
     @FXML
@@ -387,6 +389,14 @@ public class FXMLMainAppController{
         txtBoxRPCLimit.textProperty().addListener((observable, previous, input) -> {
             int frameLimit = validateFrameLimit(input, txtBoxRPCLimit);
             RPC.setFrameLimit(frameLimit);
+        });
+        txtBoxBBLimit.textProperty().addListener((observable, previous, input)->{
+            int frameLimit = validateFrameLimit(input, txtBoxBBLimit);
+            SBB.setFrameLimit(frameLimit);
+        });
+        txtBoxFFLimit.textProperty().addListener((observable, previous, input)->{
+            int frameLimit = validateFrameLimit(input, txtBoxFFLimit);
+            SForestFire.setFrameLimit(frameLimit);
         });
         btnLoad.setOnAction((event) -> {
             
