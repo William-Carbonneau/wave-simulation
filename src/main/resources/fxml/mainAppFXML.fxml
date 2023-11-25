@@ -182,7 +182,7 @@
                            </children></AnchorPane>
                     </content>
                   </TitledPane>
-                  <TitledPane animated="false" text="untitled">
+                  <TitledPane animated="false" text="Forest Fire">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
@@ -190,7 +190,7 @@
                                  <content>
                                     <VBox prefHeight="200.0" prefWidth="100.0">
                                        <children>
-                                          <TextField fx:id="txtBoxFFLimit" />
+                                          <TextField fx:id="txtBoxFFLimit" text="max" />
                                        </children>
                                     </VBox>
                                  </content>

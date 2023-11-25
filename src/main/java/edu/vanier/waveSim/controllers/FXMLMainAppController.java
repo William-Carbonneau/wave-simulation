@@ -850,12 +850,16 @@ public class FXMLMainAppController{
             // Write speed
             writer.write(Double.toString(sldrSpeed.getValue())+",");
             //Write the properties of the canvas and the stage
-            writer.write(Double.toString(simulation.getOperatingCanvas().getWidth())+",");
-            writer.write(Double.toString(simulation.getOperatingCanvas().getHeight())+",");
             writer.write(Double.toString(primaryStage.getWidth())+",");
             writer.write(Double.toString(primaryStage.getHeight())+",");
             //Write the frame limit
             writer.write(Integer.toString(this.getFrameLim())+",");
+            // txtBoxRippleLimit, txtBoxConwayLimit, txtBoxRPCLimit, txtBoxBBLimit, txtBoxFFLimit
+            writer.write(txtBoxRippleLimit.getText()+",");
+            writer.write(txtBoxConwayLimit.getText()+",");
+            writer.write(txtBoxRPCLimit.getText()+",");
+            writer.write(txtBoxBBLimit.getText()+",");
+            writer.write(txtBoxFFLimit.getText()+",");
             //Write points
             for(Iterator<Point> points = pointList.iterator(); points.hasNext();){
                 Point currentPoint = points.next();
@@ -912,14 +916,14 @@ public class FXMLMainAppController{
     
     private void loadPointsUtil() {
         int x,y;
-            for(int counterIndex = 0; counterIndex<((settings.length-9)/2); counterIndex++){
+            for(int counterIndex = 0; counterIndex<((settings.length-12)/2); counterIndex++){
                 x=0;
                 y=0;
                 for(int counterCoordinates=0; counterCoordinates<2; counterCoordinates++){
                     if(counterCoordinates==0)
-                        x=Integer.parseInt(settings[(counterIndex*2)+9]);
+                        x=Integer.parseInt(settings[(counterIndex*2)+12]);
                     else
-                        y=Integer.parseInt(settings[(counterIndex*2)+10]);
+                        y=Integer.parseInt(settings[(counterIndex*2)+13]);
                 }
                 
                 newPoint((double)x, (double)y, simulation);
@@ -948,7 +952,9 @@ public class FXMLMainAppController{
         }
         CSVReader reader = new CSVReader(new FileReader(file.getPath()));
         settings = reader.readAll().get(0);
+        /*
         verifyFileSettings(settings);
+        */
         this.primaryStage.setAlwaysOnTop(true);
         // Order:
         /*
@@ -961,7 +967,7 @@ public class FXMLMainAppController{
         points
         */
             // Set height and width
-            setStageDimensions(Double.parseDouble(settings[6]),Double.parseDouble(settings[7]));
+            setStageDimensions(Double.parseDouble(settings[4]),Double.parseDouble(settings[5]));
             //Set scaling
             simulation.setScaling(Integer.parseInt(settings[1]));
             // Set the damping
@@ -974,8 +980,12 @@ public class FXMLMainAppController{
             changeSim(simTypeChoice.getValue().toString(), simulationsList, simulation);
             // Set simulation speed
             sldrSpeed.adjustValue(Double.parseDouble(settings[3]));
-            
-            
+            // txtBoxRippleLimit, txtBoxConwayLimit, txtBoxRPCLimit, txtBoxBBLimit, txtBoxFFLimit
+            txtBoxRippleLimit.setText(settings[7]);
+            txtBoxConwayLimit.setText(settings[8]);
+            txtBoxRPCLimit.setText(settings[9]);
+            txtBoxBBLimit.setText(settings[10]);
+            txtBoxFFLimit.setText(settings[11]);
             //Set points, pause because the canvas needs to update its size
             pause.play();
             
