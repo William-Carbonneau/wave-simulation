@@ -1214,7 +1214,7 @@ public class FXMLMainAppController{
      * This method creates a help dialog for the user.
      */
     private void handleGuideItm(MenuItem guideItm) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/helpGuide2.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/helpGuide.fxml"));
         loader.setController(new FXMLHelpGuideController());
         Pane root = loader.load();
         guideItm.setDisable(true);

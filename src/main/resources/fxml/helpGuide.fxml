@@ -70,6 +70,88 @@
                         </AnchorPane>
                     </content>
                   </TitledPane>
+                  <TitledPane animated="false" text="Different Simulations">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextFlow prefHeight="200.0" prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="The application offers a wide range of simulations. The first one a wave simulator. Clicking on the screen will create a wave at this exact location. The second simulation is Conway's Game of Life. It is a cellular automaton that consists of cells, created when pressing on the screen, that are either dead or elive, based on certain rules. The third one is called &quot;Rock-Paper-Scissors&quot;. Unlike Conway's Game of Life, the simulaion cannot be controlled by clicking on the screen, because the start of the simulation is completely arbitrary. The same goes for Forest Fire. The fifth simulation, Brian's Brain, is very similar to Conway's Game of Life. The origination points of Brain's Brain are entirely created by the user, by clicking on the screen." />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" text="Wave Simulation">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextFlow prefHeight="200.0" prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="The wave simulator enables the user to create waves on the screen and to simulate its displacement over time. Each wave is created by the user by clicking on the screen. The amplitude and the speed of the simulation can be controlled using the sliders on the left. After clicking on the &quot;Play&quot; button waves can also be created by clicking on the screen." />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" text="Conway's Game of Life">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextFlow prefHeight="200.0" prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Conway's Game of Life, is one of the best examples of cellular automata. Each cell, created by the user by clicking on the screen, can be in one of two states: Dead or alive. A cell is alive if it had two or three neighbouring cells that were alive. If, at any instant, a cell has less than two neighbours that are live, or more than three, the cell dies in the next cycle of the simulation." />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" text="Rock-Paper-Scissors">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextFlow prefHeight="200.0" prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" text="Brian's Brain">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextFlow prefHeight="200.0" prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Brian's Brain is very similar to Conway's Game of Life. Like Conway's Game of Life, a cell can be dead (white) or alive (black). However, a cell can also &quot;be dying&quot; (grey). By clicking on the screen, the user creates cells that are alive. A cell that is alive goes in a dying state, in the next frame, and a dying cell becomes dead, in the next frame. A cell can be turned alive only, and only if it is dead. To make a cell become alive, it needs to have two cells in its &quot;moore neighbourhood&quot; that are alive." />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" text="Forest Fire">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextFlow prefHeight="200.0" prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Forest Fire is a simulation based on cellular automata that stimulates fires in forests, and how these former propagate over time. The simulation consists of three types of cells: Alive, burning, and dead. A cell that is alive is green, one that is burning is red, and one that is burnt (dead) is black. When the simulation starts, the forest, the screen, only consists of trees that are alive. But, like natural forests, there is a probability that a tree will burn. This probability is distated by the user, using the slider to the left. Once a fire catches, arbitrarily, it propagates by burning all the trees in its moore neighbourhood. A tree that has a burning tree in its moore neighbourhood, will be burning in the next frame, and a burning tree will die (be burnt), in the next iteration of the animation. When a tree is burnt (black), there is a probability that it grows back again. This probability is controlled by the second slider.">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
               </panes>
             </Accordion>
          </children>
