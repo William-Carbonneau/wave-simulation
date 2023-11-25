@@ -242,11 +242,11 @@
             </Tab>
             <Tab text="View Render">
                <content>
-                  <AnchorPane fx:id="viewRenderAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <VBox fx:id="SimVBox1" prefHeight="472.0" prefWidth="548.0">
                            <children>
-                              <AnchorPane>
+                              <AnchorPane fx:id="viewRenderAnchorPane">
                                  <children>
                                     <ImageView fx:id="imageViewSequence" fitHeight="386.0" fitWidth="548.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                  </children>

@@ -251,6 +251,9 @@ public class FXMLMainAppController{
                     csvViewRender = folder+"\\"+nFile;
                     System.out.println(csvViewRender);
                     adjustDimensionsRender(csvViewRender);
+                    System.out.println("Done without exceptions thrown!");
+                    Transition pause2  = new PauseTransition(Duration.millis(1000));
+                    pause2.play();
                 }
                 folderFiles.remove(nFile);
             }else {
