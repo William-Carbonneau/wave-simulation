@@ -30,12 +30,20 @@ public class SimForestFire extends CellularLogic{
             setScaling(scale);
         }
     }
+    // Number between 1 and 10
+    public void setFire(double fire) {
+        this.fire = fire;
+    }
+
+    public void setTree(double tree) {
+        this.tree = tree;
+    }
 
     @Override
        public void simFrame() {
            if(needToInitialize){
-               fire = 0.01;
-               tree=1;
+               fire = 0.5;
+               tree = 0.5;
                needToInitialize=false;
                for(int counterX = 1; counterX<scaledX-1; counterX++){
                    for(int counterY =1; counterY<scaledY-1; counterY++){

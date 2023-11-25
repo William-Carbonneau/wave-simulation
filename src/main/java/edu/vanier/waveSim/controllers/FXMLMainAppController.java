@@ -306,6 +306,8 @@ public class FXMLMainAppController{
     @FXML private Button btnPlayRender;
     @FXML private Button btnLoad;
     @FXML private AnchorPane viewRenderAnchorPane;
+    @FXML private Slider fireSldr;
+    @FXML private Slider treeSldr;
     
     // list of choices for scale factor, 1 and then multiples of 2 (for math reasons)
     ObservableList<Integer> scaleChoiceItems = FXCollections.observableArrayList(1,2,4,6,8);
@@ -482,7 +484,18 @@ public class FXMLMainAppController{
                       WaveSim.setDamping(1-newValue.floatValue());
                   }
         });
-        
+        fireSldr.valueProperty().addListener(new ChangeListener<Number>(){
+            @Override
+            public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue){
+                SForestFire.setFire(newValue.doubleValue()/10);
+            }
+        });
+        treeSldr.valueProperty().addListener(new ChangeListener<Number>(){
+            @Override
+            public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue){
+                SForestFire.setTree(newValue.doubleValue()/10);
+            }
+        });
         amplitudeSldr.valueProperty().addListener(new ChangeListener<Number>(){
             @Override
             public void changed(
