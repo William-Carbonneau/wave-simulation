@@ -17,8 +17,8 @@ import org.slf4j.LoggerFactory;
 public class SimForestFire extends CellularLogic{
     private final static Logger logger = LoggerFactory.getLogger(SimForestFire.class);
     private boolean needToInitialize = true;
-    private double fire;
-    private double tree;
+    private double fire=0.5;
+    private double tree=0.5;
     
 
     public SimForestFire(Canvas operatingCanvas, int widthX, int heightY, int scale) {
@@ -42,8 +42,6 @@ public class SimForestFire extends CellularLogic{
     @Override
        public void simFrame() {
            if(needToInitialize){
-               fire = 0.5;
-               tree = 0.5;
                needToInitialize=false;
                for(int counterX = 1; counterX<scaledX-1; counterX++){
                    for(int counterY =1; counterY<scaledY-1; counterY++){
@@ -63,8 +61,8 @@ public class SimForestFire extends CellularLogic{
                            colorCell(counterX, counterY, Color.RED);
                        }
                        else{
-                           double n = Math.random();
-                           if(n>=0&&n<=fire){
+                           double f = Math.random();
+                           if(f>0&&f<fire){
                                this.nextFrame[counterX][counterY]=1;
                                colorCell(counterX, counterY, Color.RED);
                            }
@@ -77,7 +75,7 @@ public class SimForestFire extends CellularLogic{
                    // is DEad
                    else{
                        double n = Math.random();
-                       if(n>=0&&n<=tree){
+                       if(n>0&&n<=tree){
                            this.nextFrame[counterX][counterY]=2;
                            colorCell(counterX, counterY, Color.GREEN);
                        }
