@@ -1,4 +1,3 @@
-
 package edu.vanier.waveSim.models;
 
 import java.util.Random;
@@ -19,12 +18,18 @@ public class SimAnt extends CellularLogic {
     /**
      * Horizontal and Vertical position of the ant
      */
-    int xPosition, yPosition;
+    private int xPosition, yPosition;
     Random random = new Random();
     /**
      * Direction that the ant faces. 0 = Up, 1 = Right, 2 = Down, 3 = Left
      */
-    int direction = 0;
+    private int direction = 0;
+
+    /**
+     * Boolean to choose which version of the simulation is activated. Normal is
+     * the default one.
+     */
+    private boolean pyramid = false, normal = true;
 
     /**
      * Constructor to initialize the simulation
@@ -55,7 +60,11 @@ public class SimAnt extends CellularLogic {
             hasInitialized = true;
             System.out.println(scaledX + ", " + scaledY);
         }
-        antMovesNormal();
+        if (pyramid == true) {
+            antMovesPyramid();
+        } else if (normal == true) {
+            antMovesNormal();
+        }
     }
 
     /*
@@ -232,6 +241,24 @@ public class SimAnt extends CellularLogic {
         }
     }
 
+    public boolean isPyramid() {
+        return pyramid;
+    }
+
+    public void setPyramid(boolean pyramid) {
+        this.pyramid = pyramid;
+    }
+
+    public boolean isNormal() {
+        return normal;
+    }
+
+    public void setNormal(boolean normal) {
+        this.normal = normal;
+    }
+
+    
+    
     @Override
     public void setPoint(int x, int y) {
     }
