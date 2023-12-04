@@ -47,6 +47,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -176,6 +177,8 @@ public class FXMLMainAppController{
     @FXML private Slider fireSldr;
     @FXML private Slider treeSldr;
     @FXML private HBox hboxViewButtons;
+    @FXML private TextField txtAntFrameLimit;
+    @FXML private ToggleButton tglAntMode;
     
     /**list of choices for scaleOld factor, 1 and then multiples of 2 (for math reasons)*/
     ObservableList<Integer> scaleChoiceItems = FXCollections.observableArrayList(1,2,4,6,8);
@@ -239,6 +242,18 @@ public class FXMLMainAppController{
             loadPointsUtil();
         });
         
+        /** set the pyramid mode true if selected, if not it uses the normal mode */
+        tglAntMode.setOnAction((event) -> {
+            if (tglAntMode.isSelected()) {
+                Ant.setPyramid(true);
+                Ant.setNormal(false);
+            }
+            else{
+                Ant.setPyramid(false);
+                Ant.setNormal(true);         
+            }
+        });
+        
         /** bind height of simulation to tab pane height*/
         SimTabPane.heightProperty().addListener((observable) -> {
             setHeight(SimTabPane.heightProperty().getValue().intValue(), simulation, animation, lblHi);
@@ -297,6 +312,11 @@ public class FXMLMainAppController{
         txtBoxDLALimit.textProperty().addListener((observable, previous, input) -> {
             int frameLimit = validateFrameLimit(input, txtBoxDLALimit);
             DLA.setFrameLimit(frameLimit);
+        });
+        /** handle text box for ant simulation frame limit*/
+        txtAntFrameLimit.textProperty().addListener((observable, previous, input) -> {
+            int frameLimit = validateFrameLimit(input, txtAntFrameLimit);
+            Ant.setFrameLimit(frameLimit);
         });
         
         /** handle load button in view render tab*/

@@ -15,6 +15,7 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -23,7 +24,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<BorderPane prefHeight="636.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="636.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <VBox prefHeight="26.0" prefWidth="862.0" BorderPane.alignment="CENTER">
          <children>
@@ -224,6 +225,34 @@
                            </children>
                         </AnchorPane>
                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" text="Ant">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane layoutY="29.6" prefHeight="142.0" prefWidth="150.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0">
+                                 <content>
+                                    <VBox alignment="TOP_CENTER" prefHeight="149.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="Frame Limit" />
+                                          <TextField fx:id="txtAntFrameLimit" promptText="txtAntFrameLimit" text="max" />
+                                          <Label text="Ant/Pyramid">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <ToggleButton fx:id="tglAntMode" mnemonicParsing="false" text="Mode">
+                                             <VBox.margin>
+                                                <Insets top="5.0" />
+                                             </VBox.margin>
+                                          </ToggleButton>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
                   </TitledPane>
                </panes>
             </Accordion>

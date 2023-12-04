@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Langton's ant is a cellular automaton where an "ant" walks in the grid
  * depending on the color/value of the cell, it turns right or left.
- *
+ * Reference: Steckles, K. & A. (2015, September 14). Langton's Ant - Numberphile. Youtube. https://www.youtube.com/watch?v=NWBToaXK5T0  
  * @author 2264570 - Dmitrii Cazacu
  */
 public class SimAnt extends CellularLogic {
