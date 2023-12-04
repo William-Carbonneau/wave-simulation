@@ -240,31 +240,36 @@ public class SimAnt extends CellularLogic {
             colorCell(x, y, Color.WHITE);
         }
     }
-
+    
+    /**
+     * Get the pyramid version boolean of the simulation
+     * @return pyramid boolean 
+     */
     public boolean isPyramid() {
         return pyramid;
     }
-
+    /**
+     * Set the pyramid version of the simulation
+     * @param pyramid boolean 
+     */
     public void setPyramid(boolean pyramid) {
         this.pyramid = pyramid;
     }
 
+    /**
+     * Get the normal version boolean of the simulation
+     * @return normal
+     */
     public boolean isNormal() {
         return normal;
     }
 
+    /**
+     * Set the normal version of the simulation
+     * @param normal boolean 
+     */
     public void setNormal(boolean normal) {
         this.normal = normal;
     }
 
-    
-    
-    @Override
-    public void setPoint(int x, int y) {
-    }
-
-    @Override
-    public boolean removePoint(int x, int y) {
-        return false;
-    }
 }
