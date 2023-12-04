@@ -59,7 +59,7 @@ public class SimAnt extends CellularLogic {
             hasInitialized = true;
             System.out.println(scaledX + ", " + scaledY);
         }
-        antMoves();
+        antMovesNormal();
     }
 
     /*
@@ -67,7 +67,7 @@ public class SimAnt extends CellularLogic {
      * Using this information, it will move in a certain direction. Then, color the cell
      * on which it has previously been. Zero, a white cell, is right. One, a black cell, is left.
      */
-    public void antMoves() {
+    public void antMovesNormal() {
         if (direction == 0) {
             if (current[xPosition][yPosition] == 0) {
                 direction = 1;
@@ -126,6 +126,77 @@ public class SimAnt extends CellularLogic {
                 }
             } else if (current[xPosition][yPosition] == 1) {
                 direction = 2;
+                colorAntCell(xPosition, yPosition);
+                if (yPosition < scaledY - 1) {
+                    yPosition++;
+                    return;
+                }
+            }
+        }
+    }
+
+    /*
+     * Looks at the direction that the ant is facing and the cell on which it is on.
+     * Using this information, it will move in a certain direction. Then, color the cell
+     * on which it has previously been. Zero, a white cell, is right. One, a black cell, is left.
+     */
+    public void antMovesPyramid() {
+        if (direction == 0) {
+            direction = 1;
+            if (current[xPosition][yPosition] == 0) {
+                colorAntCell(xPosition, yPosition);
+                if (xPosition < scaledX - 1) {
+                    xPosition++;
+                    return;
+                }
+            } else if (current[xPosition][yPosition] == 1) {
+                colorAntCell(xPosition, yPosition);
+                if (xPosition > 0) {
+                    xPosition--;
+                    return;
+                }
+            }
+        } else if (direction == 1) {
+            direction = 2;
+            if (current[xPosition][yPosition] == 0) {
+
+                colorAntCell(xPosition, yPosition);
+                if (yPosition < scaledY - 1) {
+                    yPosition++;
+                    return;
+                }
+            } else if (current[xPosition][yPosition] == 1) {
+                colorAntCell(xPosition, yPosition);
+                if (yPosition > 0) {
+                    yPosition--;
+                    return;
+                }
+            }
+        } else if (direction == 2) {
+            direction = 3;
+            if (current[xPosition][yPosition] == 0) {
+                colorAntCell(xPosition, yPosition);
+                if (xPosition > 0) {
+                    xPosition--;
+                    return;
+                }
+            } else if (current[xPosition][yPosition] == 1) {
+                colorAntCell(xPosition, yPosition);
+                if (xPosition < scaledX - 1) {
+                    xPosition++;
+                    return;
+                }
+            }
+        } else if (direction == 3) {
+            direction = 0;
+            if (current[xPosition][yPosition] == 0) {
+
+                colorAntCell(xPosition, yPosition);
+                if (yPosition > 0) {
+                    yPosition--;
+                    return;
+                }
+            } else if (current[xPosition][yPosition] == 1) {
                 colorAntCell(xPosition, yPosition);
                 if (yPosition < scaledY - 1) {
                     yPosition++;
