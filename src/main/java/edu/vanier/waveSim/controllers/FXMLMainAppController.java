@@ -41,6 +41,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
@@ -178,7 +179,7 @@ public class FXMLMainAppController{
     @FXML private Slider treeSldr;
     @FXML private HBox hboxViewButtons;
     @FXML private TextField txtAntFrameLimit;
-    @FXML private ToggleButton tglAntMode;
+    @FXML private CheckBox tglAntMode;
     
     /**list of choices for scaleOld factor, 1 and then multiples of 2 (for math reasons)*/
     ObservableList<Integer> scaleChoiceItems = FXCollections.observableArrayList(1,2,4,6,8);
@@ -712,7 +713,7 @@ public class FXMLMainAppController{
                 // add the point to the ArrayList of current points.
                 pointList.add(clickPoint);
             }
-            if (simulation != simulationsList[3] && simulation != simulationsList[4] && simulation != simulationsList[5]) {
+            if (simulation != simulationsList[3] && simulation != simulationsList[4] && simulation != simulationsList[5] && simulation != simulationsList[7]) {
                 // set the point in the simulation
                 simulation.setPoint(xFloor, yFloor);
                 // add the point to the canvas as Color.RED
