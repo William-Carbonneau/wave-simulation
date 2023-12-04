@@ -22,6 +22,7 @@
 - Build software better, together. GitHub. (n.d.). https://github.com/topics/cellular-automata?l=java 
 - Wikimedia Foundation. (2021, July 3). Diffusion-limited aggregation. Wikipedia. https://en.wikipedia.org/wiki/Diffusion-limited_aggregation 
 - Computer-Kurzweil,  thomaswoehlke. (n.d.). Computer-Kurzweil/computer_kurzweil: Computer Science Infotainment. tribute to the article series in Scientific American and their German release Spektrum der wissenschaft. GitHub. https://github.com/Computer-Kurzweil/computer_kurzweil 
+- Steckles, K. & A. (2015, September 14). Langton's Ant - Numberphile. Youtube. https://www.youtube.com/watch?v=NWBToaXK5T0 
 
 ### FAQ
 >1. Where can I find instructions to use the app?

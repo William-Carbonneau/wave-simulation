@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package edu.vanier.waveSim.models;
 
 import java.util.Random;
@@ -12,8 +9,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Langton's ant is a cellular automaton where an "ant" walks in the grid
- * depending on the color/value of the cell, it turns right or left. White cells
- * makes the ant turn right, while black cells makes the ant turn left.
+ * depending on the color/value of the cell, it turns right or left.
  *
  * @author 2264570 - Dmitrii Cazacu
  */
@@ -70,6 +66,7 @@ public class SimAnt extends CellularLogic {
     public void antMovesNormal() {
         if (direction == 0) {
             if (current[xPosition][yPosition] == 0) {
+                //Direction Ant -> right
                 direction = 1;
                 colorAntCell(xPosition, yPosition);
                 if (xPosition < scaledX - 1) {
@@ -77,6 +74,7 @@ public class SimAnt extends CellularLogic {
                     return;
                 }
             } else if (current[xPosition][yPosition] == 1) {
+                //Direction Ant -> left
                 direction = 3;
                 colorAntCell(xPosition, yPosition);
                 if (xPosition > 0) {
@@ -86,6 +84,7 @@ public class SimAnt extends CellularLogic {
             }
         } else if (direction == 1) {
             if (current[xPosition][yPosition] == 0) {
+                //Direction Ant -> down
                 direction = 2;
                 colorAntCell(xPosition, yPosition);
                 if (yPosition < scaledY - 1) {
@@ -93,6 +92,7 @@ public class SimAnt extends CellularLogic {
                     return;
                 }
             } else if (current[xPosition][yPosition] == 1) {
+                //Direction Ant -> Up
                 direction = 0;
                 colorAntCell(xPosition, yPosition);
                 if (yPosition > 0) {
@@ -102,6 +102,7 @@ public class SimAnt extends CellularLogic {
             }
         } else if (direction == 2) {
             if (current[xPosition][yPosition] == 0) {
+                //Direction Ant -> left
                 direction = 3;
                 colorAntCell(xPosition, yPosition);
                 if (xPosition > 0) {
@@ -109,6 +110,7 @@ public class SimAnt extends CellularLogic {
                     return;
                 }
             } else if (current[xPosition][yPosition] == 1) {
+                //Direction Ant -> right
                 direction = 1;
                 colorAntCell(xPosition, yPosition);
                 if (xPosition < scaledX - 1) {
@@ -118,6 +120,7 @@ public class SimAnt extends CellularLogic {
             }
         } else if (direction == 3) {
             if (current[xPosition][yPosition] == 0) {
+                //Direction Ant -> up
                 direction = 0;
                 colorAntCell(xPosition, yPosition);
                 if (yPosition > 0) {
@@ -125,6 +128,7 @@ public class SimAnt extends CellularLogic {
                     return;
                 }
             } else if (current[xPosition][yPosition] == 1) {
+                //Direction Ant -> down
                 direction = 2;
                 colorAntCell(xPosition, yPosition);
                 if (yPosition < scaledY - 1) {
@@ -139,9 +143,11 @@ public class SimAnt extends CellularLogic {
      * Looks at the direction that the ant is facing and the cell on which it is on.
      * Using this information, it will move in a certain direction. Then, color the cell
      * on which it has previously been. Zero, a white cell, is right. One, a black cell, is left.
+     * It will make a pyramidal patern.
      */
     public void antMovesPyramid() {
         if (direction == 0) {
+            //Direction Ant -> right
             direction = 1;
             if (current[xPosition][yPosition] == 0) {
                 colorAntCell(xPosition, yPosition);
@@ -157,6 +163,7 @@ public class SimAnt extends CellularLogic {
                 }
             }
         } else if (direction == 1) {
+            //Direction Ant -> down
             direction = 2;
             if (current[xPosition][yPosition] == 0) {
 
@@ -173,6 +180,7 @@ public class SimAnt extends CellularLogic {
                 }
             }
         } else if (direction == 2) {
+            //Direction Ant -> left
             direction = 3;
             if (current[xPosition][yPosition] == 0) {
                 colorAntCell(xPosition, yPosition);
@@ -188,6 +196,7 @@ public class SimAnt extends CellularLogic {
                 }
             }
         } else if (direction == 3) {
+            //Direction Ant -> up
             direction = 0;
             if (current[xPosition][yPosition] == 0) {
 
