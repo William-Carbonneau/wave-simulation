@@ -918,11 +918,18 @@ public class FXMLMainAppController{
             writer.write(txtBoxSLALimit.getText()+",");
             writer.write(txtBoxDLALimit.getText()+",");
             writer.write(txtBoxBrainFrameLimit.getText()+",");
+            writer.write(txtAntFrameLimit.getText()+",");
             // Write value of sliders for Forest Fire
             writer.write(Double.toString(fireSldr.getValue())+",");
             writer.write(Double.toString(treeSldr.getValue())+",");
+            if(pointList.isEmpty()){
+                writer.write(Double.toString(amplitudeSldr.getValue()));
+                return;
+            }
             //Write Amplitude
-            writer.write(Double.toString(amplitudeSldr.getValue())+",");
+            else{
+                writer.write(Double.toString(amplitudeSldr.getValue())+",");
+            }
             //Write points
             for(Iterator<Point> points = pointList.iterator(); points.hasNext();){
                 Point currentPoint = points.next();
@@ -979,15 +986,15 @@ public class FXMLMainAppController{
     private void loadPointsUtil() {
         int x,y;
         // loop over counter
-        for(int counterIndex = 0; counterIndex<((settings.length-15)/2); counterIndex++){
+        for(int counterIndex = 0; counterIndex<((settings.length-16)/2); counterIndex++){
             x=0;
             y=0;
             // loop over coordinates
             for(int counterCoordinates=0; counterCoordinates<2; counterCoordinates++){
                 if(counterCoordinates==0)
-                    x=Integer.parseInt(settings[(counterIndex*2)+15]);
+                    x=Integer.parseInt(settings[(counterIndex*2)+16]);
                 else
-                    y=Integer.parseInt(settings[(counterIndex*2)+16]);
+                    y=Integer.parseInt(settings[(counterIndex*2)+17]);
                 }
                 // Ceate new points with these coordinates
                 newPoint((double)x, (double)y, simulation);
@@ -1048,11 +1055,12 @@ public class FXMLMainAppController{
             txtBoxSLALimit.setText(settings[9]);
             txtBoxDLALimit.setText(settings[10]);
             txtBoxBrainFrameLimit.setText(settings[11]);
+            txtAntFrameLimit.setText(settings[12]);
             //Set Sliders for Forest Fire
-            fireSldr.setValue(Double.parseDouble(settings[12]));
-            treeSldr.setValue(Double.parseDouble(settings[13]));
+            fireSldr.setValue(Double.parseDouble(settings[13]));
+            treeSldr.setValue(Double.parseDouble(settings[14]));
             //Set amplitude
-            amplitudeSldr.setValue(Double.parseDouble(settings[14]));
+            amplitudeSldr.setValue(Double.parseDouble(settings[15]));
             //Set points, pause because the canvas needs to update its size
             // The pause takes care of loading the points and putting them on the canvas
             // Normally, we would have loaded the points directly on the canvas in this method, but we realized that Java takes time to resize the primary stage and canvas
@@ -1197,7 +1205,7 @@ public class FXMLMainAppController{
      * @throws CsvException
      */
     public boolean verifyFileSettings(String[] info) throws IOException, CsvException{
-        if(info.length<15){
+        if(info.length<16){
             showAlert("The file does not contain the minimum amount of information required to load a simulation.");
             return false;
         }
@@ -1227,7 +1235,7 @@ public class FXMLMainAppController{
             return false;
         }
         //Check simulation type
-        String[] simulationTypes = {"Simple Ripple", "Conway's Game of Life", "Rock-Paper-Scissors", "Brian's Brain", "Forest Fire","Diffusion Limited Aggregation"};
+        String[] simulationTypes = {"Simple Ripple", "Conway's Game of Life", "Rock-Paper-Scissors", "Brian's Brain", "Forest Fire","Diffusion Limited Aggregation","Ant"};
         boolean isOneOfTypes = false;
         for(String element:simulationTypes)
             if(element.equals(info[2]))
@@ -1270,10 +1278,10 @@ public class FXMLMainAppController{
         }
         // Don't need to check for frame limits, because if something illegal is entered, then it just automatically goes to 'max'
         //Check how many points are in the file
-        int numOfCoordinates = (info.length-15);
+        int numOfCoordinates = (info.length-16);
         if(numOfCoordinates%2==1){
-            showAlert("A coordinate is missing. Please try again, using a valid file.");
-            return false;
+            //showAlert("A coordinate is missing. Please try again, using a valid file.");
+            //return false;
         }
         return true;
     }
