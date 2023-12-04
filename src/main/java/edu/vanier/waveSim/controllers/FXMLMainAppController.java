@@ -5,6 +5,7 @@ import edu.vanier.waveSim.models.CellularAnimTimer;
 import edu.vanier.waveSim.models.CellularLogic;
 import javafx.fxml.FXML;
 import edu.vanier.waveSim.models.ConwayGameOfLifeLogic;
+import edu.vanier.waveSim.models.SimAnt;
 import edu.vanier.waveSim.models.SimBriansBrain;
 import edu.vanier.waveSim.models.SimForestFire;
 import edu.vanier.waveSim.models.SimLogicWave;
@@ -98,7 +99,7 @@ public class FXMLMainAppController{
     /** list of origin points on screen*/
     private HashSet<Point> pointList;
     /** list of all simulations - active simulation is always instance 0*/
-    private final CellularLogic[] simulationsList = new CellularLogic[7];
+    private final CellularLogic[] simulationsList = new CellularLogic[8];
     /** the current active simulation*/
     private CellularLogic simulation; 
     /** the animation of the canvas*/
@@ -180,7 +181,7 @@ public class FXMLMainAppController{
     ObservableList<Integer> scaleChoiceItems = FXCollections.observableArrayList(1,2,4,6,8);
     
     /**list of simulation types, simple wave, etc, for the drop-down menu*/
-    ObservableList<String> simTypeChoiceItems = FXCollections.observableArrayList("Simple Ripple", "Conway's Game of Life", "Rock-Paper-Scissors - WIP", "Forest Fire", "Diffusion Limited Aggregation", "Brian's Brain");
+    ObservableList<String> simTypeChoiceItems = FXCollections.observableArrayList("Simple Ripple", "Conway's Game of Life", "Rock-Paper-Scissors - WIP", "Forest Fire", "Diffusion Limited Aggregation", "Brian's Brain", "Ant");
     
     /**
      * Initialize the FXML file of the simulation, assignee events to the controllers and 
@@ -192,6 +193,7 @@ public class FXMLMainAppController{
         SimLogicWave WaveSim = new SimLogicWave(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
         ConwayGameOfLifeLogic Conway = new ConwayGameOfLifeLogic(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
         SimRPC RPC = new SimRPC(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
+        SimAnt Ant = new SimAnt(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
         SimForestFire SLA = new SimForestFire(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
         SimDiffusionLimitedAggregation DLA = new SimDiffusionLimitedAggregation(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
         SimBriansBrain SBB = new SimBriansBrain(SimCanvas, (int) SimCanvas.getWidth(), (int) SimCanvas.getHeight(), 1);
@@ -207,6 +209,7 @@ public class FXMLMainAppController{
         simulationsList[4] = SLA;
         simulationsList[5] = DLA;
         simulationsList[6] = SBB;
+        simulationsList[7] = Ant;
         
         /** view render works indefinitely*/
 ///////        viewRenderTimer.setCycleCount(Timeline.INDEFINITE);
@@ -651,6 +654,10 @@ public class FXMLMainAppController{
                 }
                 case "Brian's Brain"->{
                     simulation = simulations[6];
+                    return simulation;
+                }
+                case "Ant"->{
+                    simulation = simulations[7];
                     return simulation;
                 }
                 default -> {
