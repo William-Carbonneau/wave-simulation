@@ -3,6 +3,7 @@ package edu.vanier.waveSim.tests;
 import com.opencsv.exceptions.CsvException;
 import java.io.IOException;
 /**
+ * This is a test class for the load settings
  * @author Everyone
  */
 public class LoadTest {
@@ -15,8 +16,15 @@ public class LoadTest {
             else
                 System.out.println("The file is invalid.");
     }
-        public static boolean verifyFileSettingsModified(String[] info) throws IOException, CsvException{
-        if(info.length<15){
+        /**
+         * This method is a modified version of that which is used in the FXMLMainAppController
+         * The only difference is that it does not show error messages using alerts
+         * It shows error messages using print statements
+         * @param info type String[] array of information that corresponds to the settings of the simulation
+         * @return boolean which indicates if the array of data is valid
+         */
+    public static boolean verifyFileSettingsModified(String[] info){
+        if(info.length<16){
             System.out.println("The file does not contain the minimum amount of information required to load a simulation.");
             return false;
         }
@@ -46,7 +54,7 @@ public class LoadTest {
             return false;
         }
         //Check simulation type
-        String[] simulationTypes = {"Simple Ripple", "Conway's Game of Life", "Rock-Paper-Scissors", "Brian's Brain", "Forest Fire","Diffusion Limited Aggregation"};
+        String[] simulationTypes = {"Simple Ripple", "Conway's Game of Life", "Rock-Paper-Scissors", "Brian's Brain", "Forest Fire","Diffusion Limited Aggregation", "Ant"};
         boolean isOneOfTypes = false;
         for(String element:simulationTypes)
             if(element.equals(info[2]))
@@ -89,7 +97,7 @@ public class LoadTest {
         }
         // Don't need to check for frame limits, because if something illegal is entered, then it just automatically goes to 'max'
         //Check how many points are in the file
-        int numOfCoordinates = (info.length-15);
+        int numOfCoordinates = (info.length-16);
         if(numOfCoordinates%2==1){
             System.out.println("A coordinate is missing. Please try again, using a valid file.");
             return false;
