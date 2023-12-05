@@ -11,6 +11,7 @@ import javax.imageio.ImageIO;
 
 /**
  *
+ * This is the test class for Perlin Noise
  * 
  */
 public class PerlinTest {

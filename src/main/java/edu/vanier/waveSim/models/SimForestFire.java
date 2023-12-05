@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
  * And once a tree has caugth fire, it is guaranteed that it will be burnt in the next frame.
  * Source for Rules:
  * Dingeldein, n.d.
+ * The idea of checking whether the cells are going to be alive or dead in the next frame using methods comes from: Algosome, n.d.
  * @author Loovdrish Sujore
  */
 public class SimForestFire extends CellularLogic{
