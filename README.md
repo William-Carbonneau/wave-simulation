@@ -31,3 +31,4 @@
 * They should be found inside the root directory of the application.
 >3. What the scaling, why can I not see the points on 1x scaling?
 * The scaling is based on pixels, so if your monitor is high resolution (ex. 4k), try using a larger scaling factor. This will also reduce cpu usage.
+>4. Save settings doesn't work for Ant, Forest Fire, RPC, and Aggregation because they start at a random location. It only saves the frame limit for all and the sliders for Forest Fire.
