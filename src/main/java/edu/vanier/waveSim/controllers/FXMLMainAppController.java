@@ -1007,7 +1007,7 @@ public class FXMLMainAppController{
      * The method uses a file chooser which allows the user to choose a file from his computer.
      * Source to use file chooser: Redko, n.d.
      * The file needs to be csv, therefore, exception handling is used to verify the validity of the file chosen by the user.
-     * The indexes, prosition, of the data in the csv file is that which is used to determine what piece of data corresponds to what setting specifically
+     * The indexes, position, of the data in the csv file is that which is used to determine what piece of data corresponds to what setting specifically
      * For example, the first piece of data, the first value in the csv file, is always going to be the value of the damping, because it is saved that way, in
      * the save settings feature.
      * If not, then the file is invalid.
