@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
  * Sources for rules:
  * Wikipedia, 2023
  * Vogel, 2018
+ * The idea of checking whether the cells are going to be alive or dead in the next frame using methods comes from: Algosome, n.d.
  * @author Loovdrish Sujore
  */
 public class SimBriansBrain extends CellularLogic{

@@ -4,7 +4,7 @@ import com.opencsv.exceptions.CsvException;
 import java.io.IOException;
 /**
  * This is a test class for the load settings
- * @author Everyone
+ * @author Loovdrish Sujore
  */
 public class LoadTest {
     public static void main(String[] args) throws IOException, CsvException {
