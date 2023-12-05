@@ -105,9 +105,7 @@ public class FXMLMainAppController{
     /** the current active simulation*/
     private CellularLogic simulation; 
     /** the animation of the canvas*/
-    private CellularAnimTimer animation; 
-    /** delay for each frame of view render tab*/
-    private final Integer viewRenderFrameDelay = 100; 
+    private CellularAnimTimer animation;  
     /**animation timer for frames in view render tab*/
     private final AnimationTimer viewRenderTimer = new AnimationTimer() {
         @Override
