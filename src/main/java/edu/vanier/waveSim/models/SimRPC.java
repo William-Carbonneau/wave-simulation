@@ -6,8 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * A WIP simulation for Rock-Paper-Scissors in which cells eat each other in sequence
+ * A simulation for Rock-Paper-Scissors in which cells eat each other in sequence
  * Rules are sequential as in paper->rock, rock->scissors, scissors->paper
+ * Loosely based on:
  * Gugubo. (2018, November 1)
  * Build software better, together. GitHub. (n.d.).
  * @author 2264570 - Dmitrii
