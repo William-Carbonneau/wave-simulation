@@ -185,7 +185,7 @@ public class FXMLMainAppController{
     ObservableList<Integer> scaleChoiceItems = FXCollections.observableArrayList(1,2,4,6,8);
     
     /**list of simulation types, simple wave, etc, for the drop-down menu*/
-    ObservableList<String> simTypeChoiceItems = FXCollections.observableArrayList("Simple Ripple", "Conway's Game of Life", "Rock-Paper-Scissors - WIP", "Forest Fire", "Diffusion Limited Aggregation", "Brian's Brain", "Ant");
+    ObservableList<String> simTypeChoiceItems = FXCollections.observableArrayList("Simple Ripple", "Conway's Game of Life", "Rock-Paper-Scissors", "Forest Fire", "Diffusion Limited Aggregation", "Brian's Brain", "Ant");
     
     /**
      * Initialize the FXML file of the simulation, assignee events to the controllers and 
@@ -666,7 +666,7 @@ public class FXMLMainAppController{
                     simulation = simulations[2];
                     return simulation;
                 }
-                case "Rock-Paper-Scissors - WIP" ->{
+                case "Rock-Paper-Scissors" ->{
                     simulation = simulations[3];
                     return simulation;                    
                 }
